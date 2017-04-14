@@ -4,14 +4,14 @@
   </a>
   <div class="card-block">
     <div class="media">
-      <img class="mr-4 img-fluid img-thumbnail rounded-circle" 
+      <img class="mr-5 img-fluid img-thumbnail rounded-circle" 
           src="{{project.imageUrl}}" alt="{{project.title}}"
           *ngIf="project.imageUrl"
           width="300px" 
           height="300px"
           >
-      <div class="media-body">
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      <div class="media-body align-self-center" height="100%">
+          {{project.description}}
       </div>
     </div>
   </div>
