@@ -8,6 +8,18 @@ const data : Project[] = [{
   	imageUrl: "assets/Chess.png",
   	description: "This is my grand chess game",
   	tools: ["java"]
+},{
+  	title: "Chess",
+  	repos: "https://github.com/fredzqm/Chess",
+  	imageUrl: "assets/Chess.png",
+  	description: "This is my grand chess game",
+  	tools: ["java"]
+},{
+  	title: "Chess",
+  	repos: "https://github.com/fredzqm/Chess",
+  	imageUrl: "assets/Chess.png",
+  	description: "This is my grand chess game",
+  	tools: ["java"]
 }];
 
 @Injectable()

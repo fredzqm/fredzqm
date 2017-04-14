@@ -1,16 +1,12 @@
 <div class="card">
-  <div class="card-block row">
-    <a href="{{project.repos}}" class='col-6'>
+  <div class="card-block">
+    <a href="{{project.repos}}">
     	<h4 class="card-title">{{project.title}}</h4>
     </a>
-    <div class='col-6'>
-  		<span *ngFor="let t of project.tools"> {{t}} </span>
-  	</div>
+    <p class="card-text col-10">{{project.description}}</p>
+    <span class="col-2">
+      <span *ngFor="let t of project.tools"> {{t}} </span>
+    </span>
   </div>
-  <div class="row">
-	  <p class="card-text">{{project.description}}</p>
-	</div>
-  <div class="row">
-  	<img *ngIf="project.imageUrl" class="card-img-button center" src="{{project.imageUrl}}" alt="{{project.title}}" width="70%" height="70%">
-	</div>
+  <img *ngIf="project.imageUrl" class="card-img-button" src="{{project.imageUrl}}" alt="{{project.title}}">
 </div>

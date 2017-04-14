@@ -8,5 +8,4 @@ import { Project } from './project';
 })
 export class AppComponent {
   title = 'app works!';
-
 }
