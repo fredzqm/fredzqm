@@ -1,4 +1,28 @@
-<div class='container' style="background-color: #888">
-	<a routerLink="/projects">Project</a>
-	<router-outlet></router-outlet>
+<div class='container-fluid'>
+	<div class='row'>
+		<div id='Hello' class="jumbotron col-12">
+			  <h1 class="display-3">Hello, world!</h1>
+			  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+			  <hr class="my-4">
+			  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+			  <p class="lead">
+			    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+			  </p>
+		</div>
+	</div>
+</div>
+<div class='container'>
+	<div class='row'>
+		<div class='col'>
+			<router-outlet></router-outlet>
+		</div>
+		<nav class="nav flex-column col-2">
+			<a class="nav-link" routerLink="/">Home</a>
+			<a class="nav-link" routerLink="/projects">Project</a>
+			<a class="nav-link" routerLink="/resume">Resume</a>
+			<a class="nav-link" href="https://github.com/fredzqm">GitHub</a>
+		  <a class="nav-link" href="#">Link</a>
+		  <a class="nav-link disabled" href="#">Disabled</a>
+		</nav>
+	</div>
 </div>
