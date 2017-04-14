@@ -8,11 +8,5 @@ import { Project } from './project';
 })
 export class AppComponent {
   title = 'app works!';
-  x : Project = {
-  	title: "Chess",
-  	repos: "https://github.com/fredzqm/Chess",
-  	imageUrl: "assets/Chess.png",
-  	description: "This is my grand chess game",
-  	tools: ["java"]
-  };
+
 }
