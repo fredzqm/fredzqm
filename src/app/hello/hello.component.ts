@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
-import { PointCollection, createPointCollection } from './pointCollection';
+import { PointCollection } from './pointCollection';
 
 @Component({
   selector: 'app-hello',
@@ -20,7 +20,11 @@ export class HelloComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  	this.pointCollection = createPointCollection(this.canvasText);
+  	this.pointCollection = new PointCollection(this.canvasText, {
+	  	friction : 0.85,
+	  	rotationForce : 0.03,
+	    springStrength : 0.1
+		});
   	this.bounceBubbles();
   }
 

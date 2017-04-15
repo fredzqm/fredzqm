@@ -4,17 +4,9 @@ class Vector {
         public y: number, 
         public z: number) 
     {}
-
-    set(x: number, y: number) {
-        this.x = x;
-        this.y = y;
-    }
 };
 
 class Point {
-    friction : number = 0.85;
-    rotationForce : number = 0.0;
-    springStrength : number = 0.1;
     curPos : Vector;
     originalPos : Vector;
     targetPos : Vector;
@@ -32,19 +24,19 @@ class Point {
         this.size = size;
     }
 
-    update() {
+    update(config: any) {
         var dx = this.targetPos.x - this.curPos.x;
         var dy = this.targetPos.y - this.curPos.y;
         // Orthogonal vector is [-dy,dx]
-        var ax = dx * this.springStrength - this.rotationForce * dy;
-        var ay = dy * this.springStrength + this.rotationForce * dx;
+        var ax = dx * config.springStrength - config.rotationForce * dy;
+        var ay = dy * config.springStrength + config.rotationForce * dx;
  
         this.velocity.x += ax;
-        this.velocity.x *= this.friction;
+        this.velocity.x *= config.friction;
         this.curPos.x += this.velocity.x;
  
         this.velocity.y += ay;
-        this.velocity.y *= this.friction;
+        this.velocity.y *= config.friction;
         this.curPos.y += this.velocity.y;
  
         var dox = this.originalPos.x - this.curPos.x;
@@ -54,9 +46,9 @@ class Point {
  
         this.targetPos.z = d / 100 + 1;
         var dz = this.targetPos.z - this.curPos.z;
-        var az = dz * this.springStrength;
+        var az = dz * config.springStrength;
         this.velocity.z += az;
-        this.velocity.z *= this.friction;
+        this.velocity.z *= config.friction;
         this.curPos.z += this.velocity.z;
  
         this.radius = this.size * this.curPos.z;
@@ -81,10 +73,11 @@ export class PointCollection {
     mousePos : Vector = new Vector(0, 0, 0);
     pointCollectionX : number = 0;
     pointCollectionY : number = 0;
-
-    constructor(
-        private points : Point[]
-    ) {}
+    points : Point[];
+    
+    constructor(str : string, private config : any) {
+        this.points = parsePoints(str);
+    }
 
     update() {
         for (var i = 0; i < this.points.length; i++) {
@@ -100,7 +93,7 @@ export class PointCollection {
             } else {
                 point.targetPos = point.originalPos;
             }
-            point.update();
+            point.update(this.config);
         }
     }
 
@@ -136,8 +129,6 @@ export class PointCollection {
 };
 
 
-
-
 // ------------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------------
@@ -168,7 +159,7 @@ function phraseToHex(phrase) {
     return hexphrase;
 }
 
-export function createPointCollection(str : string) : PointCollection {
+function parsePoints(str : string) : Point[] {
     var letterColors = [red, orange, green, blue, purple];
     let border_percentage = 2/(str.length+4);
 
@@ -197,11 +188,7 @@ export function createPointCollection(str : string) : PointCollection {
         }
         addLetter(cc_hex, col_ix, letterColors);
     }
-    
-    // sentence_length = offset;
-    // sentence_halfheight = canvas.parent().height()/2;
-    // sentence_halfheight = (y_max+y_min)/2;
-    return new PointCollection(points);
+    return points;
 };
 
 
