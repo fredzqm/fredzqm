@@ -8,13 +8,15 @@
 		<div class='col'>
 				<router-outlet></router-outlet>
 		</div>
-		<nav class="nav flex-column col-1">
-			<a class="nav-link" routerLink="/">Home</a>
-			<a class="nav-link" routerLink="/projects">Project</a>
-			<a class="nav-link" routerLink="/resume">Resume</a>
-			<a class="nav-link" href="https://github.com/fredzqm">GitHub</a>
-		  <a class="nav-link" href="#">Link</a>
-		  <a class="nav-link disabled" href="#">Disabled</a>
-		</nav>
+		<div class="col-1">
+			<nav id="sidebar" class="flex-column col-1 sticky-top">
+				<a class="nav-link" routerLink="/">Home</a>
+				<a class="nav-link" routerLink="/projects">Project</a>
+				<a class="nav-link" routerLink="/resume">Resume</a>
+				<a class="nav-link" href="https://github.com/fredzqm">GitHub</a>
+			  <a class="nav-link" href="#">Link</a>
+			  <a class="nav-link disabled" href="#">Disabled</a>
+			</nav>
+		</div>
 	</div>
 </div>
