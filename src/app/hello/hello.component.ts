@@ -14,6 +14,9 @@ import { PointCollection } from './pointCollection';
     canvas {
       background: url("../assets/hellobackgroud.jpg") no-repeat center center fixed;
     }
+    :host {
+      height: 100vh;
+    }
   `]
 })
 export class HelloComponent implements OnInit {
