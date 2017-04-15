@@ -21,12 +21,15 @@ export class HelloComponent implements OnInit {
 
   ngOnInit() {
   	this.pointCollection = createPointCollection(this.canvasText);
+  	console.log(this.pointCollection);
   	this.bounceBubbles();
   }
 
   @HostListener('mousemove', ['$event'])
   onMousemove(e: MouseEvent) {
-    this.pointCollection.setMousePos(e.pageX - this.canvas.offset().left, e.pageY - this.canvas.offset().top);
+  	let native = this.canvas.nativeElement;
+  	if (this.pointCollection)
+  	  this.pointCollection.setMousePos(e.pageX - native.offsetLeft, e.pageY - native.offsetTop);
   }
 
  
@@ -62,12 +65,12 @@ export class HelloComponent implements OnInit {
 	bounceName() {
 	    this.pointCollection.shake();
 	    this.pointCollection.draw(this.get2DContext());
-	    // setTimeout(this.bounceName, 30);
+	    setTimeout(this.bounceName.bind(this), 30);
 	}
 	 
 	bounceBubbles() {
 	    this.pointCollection.update();
 	    this.pointCollection.draw(this.get2DContext());
-	    // setTimeout(this.bounceBubbles, 30);
+	    setTimeout(this.bounceBubbles.bind(this), 30);
 	}
 }
