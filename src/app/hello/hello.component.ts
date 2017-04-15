@@ -14,7 +14,7 @@ import { PointCollection } from './pointCollection';
   `]
 })
 export class HelloComponent implements OnInit {
-	canvasText = "Welcome to International Student Association!"
+	canvasText = "Hello, I am Fred Zhang!"
 	pointCollection : PointCollection;
   height : number = 200;
   width : number = 2000;
@@ -24,7 +24,15 @@ export class HelloComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  	this.pointCollection = new PointCollection(this.canvasText, {
+    let horizonBorderPercentage = 2/(this.canvasText.length+4);
+  	this.pointCollection = new PointCollection(this.canvasText, 
+    {
+      left: this.width * horizonBorderPercentage ,
+      right: this.width * (1-horizonBorderPercentage),
+      top: this.height * 0.2,
+      buttom: this.height * 0.8
+    } ,
+    {
 	  	friction : 0.85,
 	  	rotationForce : 0.03,
 	    springStrength : 0.1
@@ -41,9 +49,8 @@ export class HelloComponent implements OnInit {
   	  	(e.pageY - native.offsetTop)  / native.offsetHeight * this.height);
   }
 
-  getContext() {
-    let native = this.canvas.nativeElement;
-    let ctx = native.getContext("2d");
+  getContext() : CanvasRenderingContext2D {
+    let ctx = this.canvas.nativeElement.getContext("2d");
     ctx.clearRect(0, 0, this.width, this.height);
     return ctx;
   }
