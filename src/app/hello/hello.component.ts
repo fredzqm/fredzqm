@@ -86,8 +86,19 @@ export class HelloComponent implements OnInit {
   	let native = this.canvas.nativeElement;
     let xPos = (e.pageX - native.offsetLeft) / native.offsetWidth *  this.width;
     let yPos = (e.pageY - native.offsetTop)  / native.offsetHeight * this.height;
+    this.setAllMousePosition(xPos, yPos);
+  }
+
+  @HostListener('mouseleave', ['$event'])
+  onMouseleave(e: MouseEvent) {
     for (let pc of this.pointCollectionList) {
-  	  pc.setMousePos(xPos, yPos);
+      pc.setMousePos(Number.MAX_VALUE, Number.MAX_VALUE);
+    }
+  }
+  
+  setAllMousePosition(xPos: number, yPos: number) {
+    for (let pc of this.pointCollectionList) {
+      pc.setMousePos(xPos, yPos);
     }
   }
 
