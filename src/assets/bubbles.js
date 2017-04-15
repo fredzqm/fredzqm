@@ -56,11 +56,11 @@ function PointCollection() {
             if (point === null)
                 continue;
  
-            if (window.reset) {
-                this.pointCollectionX = 0;
-                this.pointCollectionY = 0;
-                this.mousePos = new Vector(-1000, -1000);
-            }
+            // if (window.reset) {
+            //     this.pointCollectionX = 0;
+            //     this.pointCollectionY = 0;
+            //     this.mousePos = new Vector(-1000, -1000);
+            // }
  
             point.draw(bubbleShape, this.pointCollectionX, this.pointCollectionY);
         }
@@ -143,7 +143,7 @@ function phraseToHex(phrase) {
 }
  
 function initEventListeners() {
-    $(window).bind('resize', updateCanvasDimensions).bind('mousemove', onMove);
+    // $(window).bind('resize', updateCanvasDimensions).bind('mousemove', onMove);
  
     canvas.ontouchmove = function (e) {
         e.preventDefault();
@@ -195,56 +195,6 @@ function draw(reset) {
         pointCollection.draw(bubbleShape, reset);
     }
 }
- 
-function shake() {
-    var tmpCanvas = canvas.get(0);
- 
-    if (tmpCanvas.getContext === null) {
-        return;
-    }
- 
-    ctx = tmpCanvas.getContext('2d');
-    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
- 
-    bubbleShape = typeof bubbleShape !== 'undefined' ? bubbleShape : "circle";
- 
-    if (pointCollection) {
-        pointCollection.shake(bubbleShape);
-    }
-}
- 
-function update() {
-    if (pointCollection)
-        pointCollection.update();
-}
- 
- 
-window.reset = false;
- 
-$(window).mouseleave(function () {
-    window.reset = true;
-});
- 
-$(window).mouseenter(function () {
-    window.reset = false;
-});
- 
-var canvas;
-var canvasHeight;
-var canvasWidth;
-var ctx;
-var pointCollection;
- 
-document.rotationForce = 0.0;
-document.Friction = 0.85;
-
-var white = [0, 0, 100];
-var black = [0, 0, 27];
-var red = [0, 100, 63];
-var orange = [40, 100, 60];
-var green = [75, 100, 40];
-var blue = [196, 77, 55];
-var purple = [280, 50, 60];
 
 
 
