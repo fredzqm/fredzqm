@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
-import { PointCollection } from './pointCollection';
-import { createPointCollection } from './pointCollectionFactory';
+import { PointCollection, createPointCollection } from './pointCollection';
 
 @Component({
   selector: 'app-hello',
@@ -16,13 +15,13 @@ export class HelloComponent implements OnInit {
 	height : number;
 	pointCollection : PointCollection;
 
-	@ViewChild("myCanvas") myCanvas;
+	@ViewChild("myCanvas") canvas;
 
   constructor() { }
 
   ngOnInit() {
   	this.pointCollection = createPointCollection(this.canvasText);
-    // bubble(this.canvasText);
+  	this.bounceBubbles();
   }
 
   @HostListener('mousemove', ['$event'])
@@ -61,14 +60,14 @@ export class HelloComponent implements OnInit {
 	}
 
 	bounceName() {
-	    this.pointCollection.draw(this.get2DContext());
 	    this.pointCollection.shake();
-	    setTimeout(this.bounceName, 30);
+	    this.pointCollection.draw(this.get2DContext());
+	    // setTimeout(this.bounceName, 30);
 	}
 	 
 	bounceBubbles() {
-	    this.pointCollection.draw(this.get2DContext());
 	    this.pointCollection.update();
-	    setTimeout(this.bounceBubbles, 30);
+	    this.pointCollection.draw(this.get2DContext());
+	    // setTimeout(this.bounceBubbles, 30);
 	}
 }
