@@ -11,59 +11,81 @@ import { PointCollection } from './pointCollection';
   		width: 100%;
   		height: 100%;
   	}
+    canvas {
+      background: url("../assets/hellobackgroud.jpg") no-repeat center center fixed;
+    }
   `]
 })
 export class HelloComponent implements OnInit {
-	canvasText = "Hello, I am Fred Zhang!"
-	pointCollection : PointCollection;
+	pointCollectionList : PointCollection[] = [];
   height : number = 200;
   width : number = 2000;
-
+  
 	@ViewChild("myCanvas") canvas;
 
   constructor() { }
 
   ngOnInit() {
-    let horizonBorderPercentage = 2/(this.canvasText.length+4);
-  	this.pointCollection = new PointCollection(this.canvasText, 
+  	let a = new PointCollection("Hello, I am Fred Zhang!", 
     {
-      left: this.width * horizonBorderPercentage ,
-      right: this.width * (1-horizonBorderPercentage),
-      top: this.height * 0.2,
+      left: this.width * 0.1 ,
+      right: this.width * 0.8 ,
+      top: this.height * 0.25,
+      buttom: this.height * 0.55
+    } , {
+      friction : 0.85,
+      rotationForce : 0.0,
+      springStrength : 0.1
+    });
+    let aRepeat = () => {
+      a.shake();
+      setTimeout(aRepeat, 20);
+    };
+    aRepeat();
+    this.pointCollectionList.push(a);
+
+
+    let b = new PointCollection("A passionate programmer~", 
+    {
+      left: this.width * 0.3 ,
+      right: this.width * 0.9,
+      top: this.height * 0.67,
       buttom: this.height * 0.8
-    } ,
-    {
-	  	friction : 0.85,
-	  	rotationForce : 0.03,
-	    springStrength : 0.1
-		});
-  	this.bounceBubbles();
+    } , {
+      friction : 0.85,
+      rotationForce : 0.0,
+      springStrength : 0.1
+    });
+    let bRepeat = () => {
+      b.update();
+      setTimeout(bRepeat, 20);
+    };
+    bRepeat();
+    this.pointCollectionList.push(b);
+
+    this.startRepainter(10);
+  }
+
+  startRepainter(interval: number) {
+    let repeat = () => {
+      let ctx = this.canvas.nativeElement.getContext("2d");
+      ctx.clearRect(0, 0, this.width, this.height);
+      for (let pc of this.pointCollectionList) {
+        pc.draw(ctx);
+      }
+      setTimeout(repeat, 10);
+    };
+    repeat();
   }
 
   @HostListener('mousemove', ['$event'])
   onMousemove(e: MouseEvent) {
   	let native = this.canvas.nativeElement;
-  	if (this.pointCollection)
-  	  this.pointCollection.setMousePos(
-  	  	(e.pageX - native.offsetLeft) / native.offsetWidth *  this.width, 
-  	  	(e.pageY - native.offsetTop)  / native.offsetHeight * this.height);
+    let xPos = (e.pageX - native.offsetLeft) / native.offsetWidth *  this.width;
+    let yPos = (e.pageY - native.offsetTop)  / native.offsetHeight * this.height;
+    for (let pc of this.pointCollectionList) {
+  	  pc.setMousePos(xPos, yPos);
+    }
   }
 
-  getContext() : CanvasRenderingContext2D {
-    let ctx = this.canvas.nativeElement.getContext("2d");
-    ctx.clearRect(0, 0, this.width, this.height);
-    return ctx;
-  }
-
-	bounceName() {
-	    this.pointCollection.shake();
-	    this.pointCollection.draw(this.getContext());
-	    setTimeout(this.bounceName.bind(this), 30);
-	}
-	 
-	bounceBubbles() {
-	    this.pointCollection.update();
-	    this.pointCollection.draw(this.getContext());
-	    setTimeout(this.bounceBubbles.bind(this), 30);
-	}
 }
