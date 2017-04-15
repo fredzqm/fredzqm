@@ -33,8 +33,6 @@ function PointCollection() {
     };
  
     this.shake = function () {
-        // var randomNum = Math.floor(Math.random() * 5) - 2;
- 
         for (var i = 0; i < this.points.length; i++) {
             var point = this.points[i];
             var dx = this.mousePos.x - point.curPos.x;
@@ -143,8 +141,6 @@ function phraseToHex(phrase) {
 }
  
 function initEventListeners() {
-    // $(window).bind('resize', updateCanvasDimensions).bind('mousemove', onMove);
- 
     canvas.ontouchmove = function (e) {
         e.preventDefault();
         onTouchMove(e);

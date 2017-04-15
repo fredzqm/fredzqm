@@ -5,8 +5,8 @@ import { PointCollection, createPointCollection } from './pointCollection';
   selector: 'app-hello',
   template: `
   <canvas #myCanvas class='chess-diag'
-     [attr.width]='width'
-     [attr.height]='height'></canvas>
+     [width]='width'
+     [height]='height'></canvas>
   `
 })
 export class HelloComponent implements OnInit {
@@ -21,7 +21,6 @@ export class HelloComponent implements OnInit {
 
   ngOnInit() {
   	this.pointCollection = createPointCollection(this.canvasText);
-  	console.log(this.pointCollection);
   	this.bounceBubbles();
   }
 

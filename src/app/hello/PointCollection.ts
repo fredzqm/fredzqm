@@ -12,7 +12,6 @@ class Vector {
 };
 
 class Point {
-    color : any;
     friction : number = 0.85;
     rotationForce : number = 0.0;
     springStrength : number = 0.1;
@@ -24,7 +23,7 @@ class Point {
     size : number;
     bubbleShape : string = "Bubble";
 
-    constructor(x: number, y: number, z: number, size: number, color: any) {
+    constructor(x: number, y: number, z: number, size: number, private color: string) {
         this.curPos = new Vector(x,y,z);
         this.originalPos = new Vector(x,y,z);
         this.targetPos = new Vector(x,y,z);
