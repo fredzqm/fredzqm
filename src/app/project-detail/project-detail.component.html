@@ -1,8 +1,9 @@
-<a class='card my-3' href="{{project.repos}}">
+<a class='card my-3' [href]="project.repos">
   <div class="card-block">
     <div class="media">
       <img class="mr-5 img-fluid img-thumbnail rounded-circle" 
-          src="{{project.imageUrl}}" alt="{{project.title}}"
+          [src]="project.imageUrl" 
+          [alt]="project.title"
           *ngIf="project.imageUrl"
           width="300px" 
           height="300px"

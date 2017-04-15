@@ -22,10 +22,6 @@
         "styles.css"
       ],
       "scripts": [
-        "assets/jquery-3.2.1.min.js",
-        "assets/alphabet.js",
-        "assets/bubbles.js",
-        "assets/javascript.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
