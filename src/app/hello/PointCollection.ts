@@ -119,7 +119,10 @@ export class PointCollection {
         }
     }
 
-    draw(ctx : CanvasRenderingContext2D) {
+    draw(canvas : any) {
+        let native = canvas.nativeElement;
+        let ctx = native.getContext("2d");
+        ctx.clearRect(0, 0, native.clientWidth, native.clientHeight);
         for (var i = 0; i < this.points.length; i++) {
             var point = this.points[i];
             if (point === null)
@@ -166,7 +169,6 @@ function phraseToHex(phrase) {
     return hexphrase;
 }
 
-
 export function createPointCollection(str : string) : PointCollection {
     var letterColors = [red, orange, green, blue, purple];
     let border_percentage = 2/(str.length+4);
@@ -176,19 +178,6 @@ export function createPointCollection(str : string) : PointCollection {
     let offset = 0;
 
     function addLetter(cc_hex, ix, letterCols) {
-        let letterColors;
-        if (typeof letterCols !== 'undefined') {
-            if (Object.prototype.toString.call(letterCols) === '[object Array]' && Object.prototype.toString.call(letterCols[0]) === '[object Array]') {
-                letterColors = letterCols;
-            }
-            if (Object.prototype.toString.call(letterCols) === '[object Array]' && typeof letterCols[0] === "number") {
-                letterColors = [letterCols];
-            }
-        } else {
-            // if undefined set black
-            letterColors = [[0, 0, 27]];
-        }
-        
         var chr_data = alphabet[cc_hex].P;
         var bc = letterColors[ix % letterColors.length];
         

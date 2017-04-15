@@ -11,16 +11,11 @@ function bubble(str){
 
     border_percentage = 2/(str.length+4);
     drawName(str, letterColors);
-//    bubbleShape = 'square';
-//    bounceName();
     bounceBubbles();
 }
 
 function drawName(str, letterColors) {
     var g = [];
-
-    // var x_min=100000;
-    // var x_max=-100000;
  
     function addLetter(cc_hex, ix, letterCols) {
         if (typeof letterCols !== 'undefined') {
@@ -31,7 +26,6 @@ function drawName(str, letterColors) {
                 letterColors = [letterCols];
             }
         } else {
-            // if undefined set black
             letterColors = [[0, 0, 27]];
         }
 
@@ -41,14 +35,9 @@ function drawName(str, letterColors) {
             
             for (var i = 0; i < chr_data.length; ++i) {
                 point = chr_data[i];
-                
                 var x = point[0] + offset;
                 var y = point[1];
-                // if(x>x_max)
-                //     x_max = x;
-                // if(x<x_min)
-                //     x_min = x;
-                g.push(new Point(x,y,0.0,point[2],makeColor(bc, point[3])));
+                g.push(new Point(x,y,0.0,point[2], makeColor(bc, point[3])));
             }
             offset += document.alphabet[cc_hex].W;
         }

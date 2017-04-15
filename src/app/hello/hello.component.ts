@@ -11,8 +11,8 @@ import { PointCollection, createPointCollection } from './pointCollection';
 })
 export class HelloComponent implements OnInit {
 	canvasText = "Welcome to International Student Association!"
-	width : number;
-	height : number;
+	width : number = 1000;
+	height : number = 300;
 	pointCollection : PointCollection;
 
 	@ViewChild("myCanvas") canvas;
@@ -32,45 +32,15 @@ export class HelloComponent implements OnInit {
   	  this.pointCollection.setMousePos(e.pageX - native.offsetLeft, e.pageY - native.offsetTop);
   }
 
- 
-// function onMove(e) {
-//     if (pointCollection) {
-//         pointCollection.mousePos.set(e.pageX - canvas.offset().left, e.pageY - canvas.offset().top);
-//     }
-// }
- 
-// function onTouchMove(e) {
-//     if (pointCollection) {
-//         pointCollection.mousePos.set(e.targetTouches[0].pageX - canvas.offset().left, e.targetTouches[0].pageY - canvas.offset().top);
-//     }
-// }
-
- //  function initEventListeners() {
- //    // $(window).bind('resize', updateCanvasDimensions).bind('mousemove', onMove);
- 
- //    canvas.ontouchmove = function (e) {
- //        e.preventDefault();
- //        onTouchMove(e);
- //    };
- 
- //    canvas.ontouchstart = function (e) {
- //        e.preventDefault();
- //    };
-	// }
-
-	get2DContext() : CanvasRenderingContext2D {
-		return this.canvas.nativeElement.getContext("2d");
-	}
-
 	bounceName() {
 	    this.pointCollection.shake();
-	    this.pointCollection.draw(this.get2DContext());
+	    this.pointCollection.draw(this.canvas);
 	    setTimeout(this.bounceName.bind(this), 30);
 	}
 	 
 	bounceBubbles() {
 	    this.pointCollection.update();
-	    this.pointCollection.draw(this.get2DContext());
+	    this.pointCollection.draw(this.canvas);
 	    setTimeout(this.bounceBubbles.bind(this), 30);
 	}
 }
