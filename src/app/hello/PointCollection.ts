@@ -111,10 +111,7 @@ export class PointCollection {
         }
     }
 
-    draw(canvas : any) {
-        let native = canvas.nativeElement;
-        let ctx = native.getContext("2d");
-        ctx.clearRect(0, 0, native.clientWidth, native.clientHeight);
+    draw(ctx : any) {
         for (var i = 0; i < this.points.length; i++) {
             var point = this.points[i];
             if (point === null)
