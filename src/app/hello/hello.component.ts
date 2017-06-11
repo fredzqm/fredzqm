@@ -23,13 +23,13 @@ export class HelloComponent implements OnInit {
 	pointCollectionList : PointCollection[] = [];
   height : number = 200;
   width : number = 2000;
-  
+
 	@ViewChild("myCanvas") canvas;
 
   constructor() { }
 
   ngOnInit() {
-  	let a = new PointCollection("Hello, I am Fred Zhang!", 
+  	let a = new PointCollection("Hello, I am Fred Zhang!",
     {
       left: this.width * 0.1 ,
       right: this.width * 0.8 ,
@@ -48,7 +48,7 @@ export class HelloComponent implements OnInit {
     this.pointCollectionList.push(a);
 
 
-    let b = new PointCollection("A passionate programmer~", 
+    let b = new PointCollection("A passionate programmer~",
     {
       left: this.width * 0.3 ,
       right: this.width * 0.9,
@@ -76,7 +76,7 @@ export class HelloComponent implements OnInit {
       for (let pc of this.pointCollectionList) {
         pc.draw(ctx);
       }
-      setTimeout(repeat, 10);
+      setTimeout(repeat, interval);
     };
     repeat();
   }
@@ -95,7 +95,7 @@ export class HelloComponent implements OnInit {
       pc.setMousePos(Number.MAX_VALUE, Number.MAX_VALUE);
     }
   }
-  
+
   setAllMousePosition(xPos: number, yPos: number) {
     for (let pc of this.pointCollectionList) {
       pc.setMousePos(xPos, yPos);
