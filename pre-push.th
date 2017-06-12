@@ -1,0 +1,7 @@
+ng build --output-path dist
+cd dist
+git init
+git remote add origin https://github.com/fredzqm/fredzqm.github.io
+git add .
+git ci -m 'built'
+git push -u origin master -f
