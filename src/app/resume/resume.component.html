@@ -1,0 +1,12 @@
+<div class="container" id="PDF">
+    <pdf-viewer
+      [src]="resumeUrl"
+      [zoom]="1.9"
+      page="page"
+      [render-text]="true"
+      [show-all]="true">
+    </pdf-viewer>
+</div>
+<a id="DownloadButton" md-fab [href]="resumeUrl">
+  <md-icon><i class="fa fa-download" aria-hidden="true"></i></md-icon>
+</a>
