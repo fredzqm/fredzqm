@@ -16,6 +16,13 @@ import {ErrorComponent} from './error/error.component';
 import {TruncatePipe} from './shared/trunc.pipe';
 
 import {Route} from './route.module';
+import {MaterialModule, MdButtonModule} from "@angular/material";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {FlexLayoutModule} from "@angular/flex-layout";
+
+import { MdToolbarModule } from '@angular/material';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -28,13 +35,18 @@ import {Route} from './route.module';
     ProjectsComponent,
     AboutComponent,
     ErrorComponent,
-    TruncatePipe
+    TruncatePipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
     NgbModule.forRoot(),
-    Route
+    Route,
+    MdToolbarModule,
+    MdButtonModule
   ],
   providers: [ProjectService],
   bootstrap: [AppComponent]
