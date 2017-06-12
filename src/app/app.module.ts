@@ -2,9 +2,14 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {MdButtonModule, MdToolbarModule} from "@angular/material";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {FlexLayoutModule} from "@angular/flex-layout";
 import {PdfViewerComponent} from 'ng2-pdf-viewer';
 
 import {AppComponent} from './app.component';
+import {NavbarComponent} from './navbar/navbar.component';
+import {ResumeComponent} from './resume/resume.component';
 import {ProjectService} from './shared/project.service';
 import {ProjectDetailComponent} from './project-detail/project-detail.component';
 import {ProjectListComponent} from './project-list/project-list.component';
@@ -17,14 +22,6 @@ import {ErrorComponent} from './error/error.component';
 import {TruncatePipe} from './shared/trunc.pipe';
 
 import {Route} from './route.module';
-import {MdButtonModule} from "@angular/material";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {FlexLayoutModule} from "@angular/flex-layout";
-
-import {MdToolbarModule} from '@angular/material';
-import {NavbarComponent} from './navbar/navbar.component';
-import {ResumeComponent} from './resume/resume.component';
-
 
 @NgModule({
   declarations: [
