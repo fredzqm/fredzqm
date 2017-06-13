@@ -7,8 +7,22 @@ host p {
   margin-left: 20px;
 }
 
-button[md-mini-fab] {
+#showRepos {
+  position: absolute;
+  right: 10px;
+  bottom: 110px;
+}
+
+#showDetails {
+  position: absolute;
+  right: 10px;
+  bottom: 60px;
+}
+
+#showOverview {
   position: absolute;
   right: 10px;
   bottom: 10px;
 }
+
+
