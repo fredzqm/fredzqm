@@ -3,4 +3,5 @@ export interface Project {
     name: string;
     info: string;
     image: string;
+    repos: string;
 }

@@ -1,16 +1,21 @@
-<a class='card my-3' [href]="project.repos">
-  <div class="card-block">
-    <div class="media">
-      <img class="mr-5 img-fluid img-thumbnail rounded-circle" 
-          [src]="project.imageUrl" 
-          [alt]="project.title"
-          *ngIf="project.imageUrl"
-          width="300px" 
-          height="300px"
-          >
-      <div class="media-body align-self-center" height="100%">
-          {{project.description}}
+<div class="container" *ngIf="project">
+  <div class="card">
+    <a id="gitHubLink" md-mini-fab color="warn" [href]="project.repos">
+      <img alt="GitHub" class="docs-github-logo" src="assets/github-circle-black.svg">
+    </a>
+    <div class="card-block">
+      <h1 class="card-title text-center">{{project.name}}</h1>
+      <div class="media row">
+        <img class="img-fluid img-thumbnail rounded-circle col-4"
+             *ngIf="project.image"
+             alt="Generic placeholder image"
+             [src]="project.image"
+             [alt]="project.name">
+        <div class="card-text media-body align-self-center col-8" height="100%">
+          {{project.info}}
+        </div>
       </div>
     </div>
   </div>
-</a>
+</div>
+

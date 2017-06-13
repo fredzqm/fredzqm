@@ -13,10 +13,8 @@ import {ResumeComponent} from './resume/resume.component';
 import {ProjectService} from './shared/project.service';
 import {ProjectDetailComponent} from './project-detail/project-detail.component';
 import {ProjectCardComponent} from './project-card/project-card.component';
-import {ProjectListComponent} from './project-list/project-list.component';
 import {HelloComponent} from './hello/hello.component';
 import {HomeComponent} from './home/home.component';
-import {DetailComponent} from './detail/detail.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {AboutComponent} from './about/about.component';
 import {ErrorComponent} from './error/error.component';
@@ -28,10 +26,8 @@ import {Route} from './route.module';
   declarations: [
     AppComponent,
     ProjectDetailComponent,
-    ProjectListComponent,
     HelloComponent,
     HomeComponent,
-    DetailComponent,
     ProjectsComponent,
     AboutComponent,
     ErrorComponent,
