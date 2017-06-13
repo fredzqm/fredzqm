@@ -15,10 +15,6 @@ export class ProjectsComponent implements OnInit {
   constructor(public _projectService: ProjectService, public router: Router) {
   }
 
-  chooseProject(project) {
-    this.router.navigate(['detail', project.id]);
-  }
-
   ngOnInit() {
     this._projectService.getProjects().then(projects => this.projects = projects);
   }

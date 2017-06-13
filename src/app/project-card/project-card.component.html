@@ -2,5 +2,5 @@
 <h2>{{project.name}}</h2>
 <p>{{project.info | truncate}}</p>
 <p>
-  <button class="btn btn-block btn-app" type="button" (click)="chooseProject(project)">Learn More</button>
+  <button class="btn btn-block btn-app" type="button" [routerLink]="['/detail', project.id]">Learn More</button>
 </p>
