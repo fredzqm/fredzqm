@@ -1,4 +1,4 @@
-ng build --output-path dist
+ng build --environment=production --output-path dist
 cd dist
 git init
 git remote add origin https://github.com/fredzqm/fredzqm.github.io
