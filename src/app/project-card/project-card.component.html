@@ -1,6 +1,11 @@
-<img class="img-rounded " src="{{project.image}}" alt="Generic placeholder image" width="140" height="140">
-<h2>{{project.name}}</h2>
-<p>{{project.info | truncate}}</p>
-<p>
-  <button class="btn btn-block btn-app" type="button" [routerLink]="['/detail', project.id]">Learn More</button>
-</p>
+<div class="card">
+  <img class="card-img-top img-thumbnail img-fluid" [src]="project.image" alt="Generic placeholder image">
+  <div class="card-block">
+    <h4 class="card-title">{{project.name}}</h4>
+    <p>{{project.info | truncate}}</p>
+  </div>
+  <button md-mini-fab color="primary" [routerLink]="['/detail', project.id]">
+    <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+  </button>
+</div>
+

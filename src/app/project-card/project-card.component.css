@@ -6,3 +6,9 @@ host p {
   margin-right: 20px;
   margin-left: 20px;
 }
+
+button[md-mini-fab] {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}

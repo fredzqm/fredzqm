@@ -2,38 +2,45 @@ import {Project} from './project';
 
 export const ourProjects: Project[] = [
   {
-    id: 101,
+    id: 1,
     name: 'NodeJS App',
     info: 'NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app.',
     image: 'assets/Chess.png',
     repos: "https://github.com/fredzqm/Chess"
   },
   {
-    id: 102,
-    name: 'Angular App',
-    info: 'Angular app built as a small social media app. Uses Angular to handle major parts of app. Great app! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Angular app built as a small social media app. Uses Angular to handle major parts of app. Great app! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app.',
-    image: 'app/shared/images/image2.jpg',
+    id: 2,
+    name: 'NodeJS App',
+    info: 'NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app.',
+    image: 'assets/Chess.png',
     repos: "https://github.com/fredzqm/Chess"
   },
   {
-    id: 103,
-    name: 'WebRTC',
-    info: 'WebRTC app built as a chat app. This app was so cool that it did everything we needed it to do. Great app! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Angular app built as a small social media app. Uses Angular to handle major parts of app. Great app! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app.',
-    image: 'app/shared/images/image3.jpg',
+    id: 3,
+    name: 'NodeJS App',
+    info: 'NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app.',
+    image: 'assets/Chess.png',
     repos: "https://github.com/fredzqm/Chess"
   },
   {
-    id: 104,
-    name: 'Firebase',
-    info: 'Firebase app built as a chat app. This app was so cool that it did everything we needed it to do. Great app! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Angular app built as a small social media app. Uses Angular to handle major parts of app. Great app! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app.',
-    image: 'app/shared/images/image4.jpg',
+    id: 4,
+    name: 'NodeJS App',
+    info: 'NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app.',
+    image: 'assets/Chess.png',
     repos: "https://github.com/fredzqm/Chess"
   },
   {
-    id: 105,
-    name: 'Angular 2',
-    info: 'Angular 2 app built as a chat app. This app was so cool that it did everything we needed it to do. Great app! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app.',
-    image: 'app/shared/images/image5.jpg',
+    id: 5,
+    name: 'NodeJS App',
+    info: 'NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app.',
+    image: 'assets/Chess.png',
     repos: "https://github.com/fredzqm/Chess"
-  }
+  },
+  {
+    id: 6,
+    name: 'NodeJS App',
+    info: 'NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. NodeJS app built as a chat app. This app was so cool that it did everything we needed it to do. Great app!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.NodeJS app built as a chat app.',
+    image: 'assets/Chess.png',
+    repos: "https://github.com/fredzqm/Chess"
+  },
 ];
