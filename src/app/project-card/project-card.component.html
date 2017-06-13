@@ -4,7 +4,10 @@
     <h4 class="card-title">{{project.name}}</h4>
     <p>{{project.info | truncate}}</p>
   </div>
-  <button md-mini-fab color="primary" [routerLink]="['/detail', project.id]">
+  <button md-mini-fab color="primary" [routerLink]="['/detail', project.id]"
+          mdTooltip="Show Overview!"
+          mdTooltipPosition="before"
+  >
     <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
   </button>
 </div>
