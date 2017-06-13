@@ -1,0 +1,8 @@
+host {
+  padding: 20;
+}
+
+host p {
+  margin-right: 20px;
+  margin-left: 20px;
+}

@@ -12,6 +12,7 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {ResumeComponent} from './resume/resume.component';
 import {ProjectService} from './shared/project.service';
 import {ProjectDetailComponent} from './project-detail/project-detail.component';
+import {ProjectCardComponent} from './project-card/project-card.component';
 import {ProjectListComponent} from './project-list/project-list.component';
 import {HelloComponent} from './hello/hello.component';
 import {HomeComponent} from './home/home.component';
@@ -38,6 +39,7 @@ import {Route} from './route.module';
     NavbarComponent,
     PdfViewerComponent,
     ResumeComponent,
+    ProjectCardComponent,
   ],
   imports: [
     BrowserModule,
