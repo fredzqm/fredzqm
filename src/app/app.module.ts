@@ -22,6 +22,7 @@ import {TruncatePipe} from './shared/trunc.pipe';
 
 import {Route} from './route.module';
 import {MarkdownToHtmlModule} from 'ng2-markdown-to-html';
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {MarkdownToHtmlModule} from 'ng2-markdown-to-html';
     PdfViewerComponent,
     ResumeComponent,
     ProjectCardComponent,
+    PageHeaderComponent,
   ],
   imports: [
     BrowserModule,
