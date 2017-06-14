@@ -1,6 +1,6 @@
 <div class="container" *ngIf="project">
   <div class="card">
-    <a id="gitHubLink" md-mini-fab color="warn" [href]="project.repos">
+    <a id="gitHubLink" md-mini-fab color="warn" href="{{'https://github.com/fredzqm/' + project.repos}}">
       <img alt="GitHub" class="docs-github-logo" src="assets/github-circle-black.svg">
     </a>
     <div class="card-block">
@@ -17,8 +17,6 @@
       </div>
     </div>
   </div>
-
-  <div Markdown [path]="project.repos + '/blob/master/README.md'"></div>
-  <div Markdown [path]="'https://raw.githubusercontent.com/fredzqm/Chess/master/README.md'"></div>
+  <markdown-to-html src="{{'https://raw.githubusercontent.com/fredzqm/' + project.repos + '/master/README.md'}}"></markdown-to-html>
 </div>
 

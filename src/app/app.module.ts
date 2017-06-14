@@ -21,7 +21,7 @@ import {ErrorComponent} from './error/error.component';
 import {TruncatePipe} from './shared/trunc.pipe';
 
 import {Route} from './route.module';
-import {MarkdownModule} from "angular2-markdown";
+import {MarkdownToHtmlModule} from 'ng2-markdown-to-html';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,7 @@ import {MarkdownModule} from "angular2-markdown";
     MdToolbarModule,
     MdButtonModule,
     MdTooltipModule,
-    MarkdownModule.forRoot()
+    MarkdownToHtmlModule.forRoot(),
   ],
   providers: [ProjectService],
   bootstrap: [AppComponent]

@@ -165,6 +165,10 @@
   version "2.5.38"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.38.tgz#a4379124c4921d4e21de54ec74669c9e9b356717"
 
+"@types/marked@0.0.28":
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-0.0.28.tgz#44ba754e9fa51432583e8eb30a7c4dd249b52faa"
+
 "@types/node@^6.0.46", "@types/node@~6.0.60":
   version "6.0.78"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.78.tgz#5d4a3f579c1524e01ee21bf474e6fba09198f470"
@@ -172,6 +176,10 @@
 "@types/pdf@0.0.31":
   version "0.0.31"
   resolved "https://registry.yarnpkg.com/@types/pdf/-/pdf-0.0.31.tgz#c0b210ce752fd59ad8331be5d4b55cf369141b93"
+
+"@types/prismjs@^1.6.0":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@types/prismjs/-/prismjs-1.6.2.tgz#0d49b1c8a78a4d129cfd55360b06172a64139de0"
 
 "@types/q@^0.0.32":
   version "0.0.32"
@@ -247,13 +255,6 @@ alphanum-sort@^1.0.1, alphanum-sort@^1.0.2:
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
-
-angular2-markdown@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/angular2-markdown/-/angular2-markdown-1.6.0.tgz#8636bf9daad70fc35633126707ffb33e684fbab1"
-  dependencies:
-    marked "^0.3.6"
-    prismjs "^1.6.0"
 
 ansi-align@^2.0.0:
   version "2.0.0"
@@ -3111,6 +3112,15 @@ ncname@1.0.x:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+ng2-markdown-to-html@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/ng2-markdown-to-html/-/ng2-markdown-to-html-1.2.1.tgz#aca0bc7e99c746eca860cb14e5a4e95eb7619c0a"
+  dependencies:
+    "@types/marked" "0.0.28"
+    "@types/prismjs" "^1.6.0"
+    marked "^0.3.6"
+    prismjs "^1.6.0"
 
 ng2-pdf-viewer@^1.1.0:
   version "1.1.0"
