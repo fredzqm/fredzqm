@@ -12,3 +12,11 @@ img {
 h1.card-title {
   font-family: OCR A Std, monospace;
 }
+
+#IntroCard {
+  margin: 30px;
+}
+
+#README {
+  padding: 30px;
+}
