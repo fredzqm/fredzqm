@@ -6,8 +6,7 @@ import {Project} from "../shared/project";
   templateUrl: './project-card.component.html',
   styleUrls: ['./project-card.component.css'],
   host: {
-    'class':'col-lg-4',
-    'style':'margin-top: 20px;'
+    'class':'col-lg-4'
   }
 })
 export class ProjectCardComponent implements OnInit {

@@ -1,11 +1,17 @@
-host {
-  padding: 20;
+:host {
+  margin-top: 20px;
+  transition: all 0.5s ease-in-out;
 }
 
-host p {
+:host:hover {
+  transform: scale(1.05);
+}
+
+:host p {
   margin-right: 20px;
   margin-left: 20px;
 }
+
 
 #showRepos {
   position: absolute;
