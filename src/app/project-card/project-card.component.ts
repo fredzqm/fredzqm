@@ -18,8 +18,4 @@ export class ProjectCardComponent implements OnInit {
   ngOnInit() {
   }
 
-  showOverview() {
-
-  }
-
 }
