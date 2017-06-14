@@ -18,3 +18,7 @@
 .spacer {
     min-height: 3%;
 }
+
+app-hello {
+  height: 600px;
+}

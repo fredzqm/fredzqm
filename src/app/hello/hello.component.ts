@@ -4,24 +4,19 @@ import { PointCollection } from './pointCollection';
 @Component({
   selector: 'app-hello',
   template: `
-  <canvas #myCanvas class='chess-diag' [height]='height' [width]='width'></canvas>
+  <canvas #myCanvas class='chess-diag' [height]="height" [width]="width"></canvas>
   `,
   styles:[`
   	:host canvas {
   		width: 100%;
   		height: 100%;
+      background: url("../assets/yosemite.jpg") no-repeat center center fixed;
   	}
-    canvas {
-      background: url("../assets/hellobackgroud.jpg") no-repeat center center fixed;
-    }
-    :host {
-      height: 100vh;
-    }
   `]
 })
 export class HelloComponent implements OnInit {
 	pointCollectionList : PointCollection[] = [];
-  height : number = 200;
+  height : number = 600;
   width : number = 2000;
 
 	@ViewChild("myCanvas") canvas;
@@ -29,7 +24,7 @@ export class HelloComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  	let a = new PointCollection("Hello, I am Fred Zhang!",
+  	let a = new PointCollection("Hello, I am  Fred  Zhang!",
     {
       left: this.width * 0.1 ,
       right: this.width * 0.8 ,
@@ -48,7 +43,7 @@ export class HelloComponent implements OnInit {
     this.pointCollectionList.push(a);
 
 
-    let b = new PointCollection("A passionate programmer~",
+    let b = new PointCollection("A passionate  programmer~~",
     {
       left: this.width * 0.3 ,
       right: this.width * 0.9,
