@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {MdButtonModule, MdToolbarModule, MdTooltipModule} from "@angular/material";
+import {MdButtonModule, MdToolbarModule, MdTooltipModule, MdMenuModule, MdIconModule} from "@angular/material";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {PdfViewerComponent} from 'ng2-pdf-viewer';
@@ -22,8 +22,8 @@ import {TruncatePipe} from './shared/trunc.pipe';
 
 import {Route} from './route.module';
 import {MarkdownToHtmlModule} from 'ng2-markdown-to-html';
-import { PageHeaderComponent } from './page-header/page-header.component';
-import { PageFooterComponent } from './page-footer/page-footer.component';
+import {PageHeaderComponent} from './page-header/page-header.component';
+import {PageFooterComponent} from './page-footer/page-footer.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +52,8 @@ import { PageFooterComponent } from './page-footer/page-footer.component';
     MdToolbarModule,
     MdButtonModule,
     MdTooltipModule,
+    MdMenuModule,
+    MdIconModule,
     MarkdownToHtmlModule.forRoot(),
   ],
   providers: [ProjectService],

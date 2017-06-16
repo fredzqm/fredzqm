@@ -1,14 +1,55 @@
-<md-toolbar color="primary" class="navbar-style">
-  <button md-button routerLink="/" href="/">Home</button>
-  <button md-button routerLink="/projects" href="/projects">Project</button>
-  <button md-button routerLink="/about" href="/about">About</button>
-  <button md-button routerLink="/resume" href="/resume">Resume</button>
-  <button md-button onclick="window.location='https://www.github.com/fredzqm';">
-    <img alt="GitHub" class="docs-github-logo" src="assets/github-circle-white-transparent.svg">
-    GitHub
+<md-toolbar color="primary">
+  <button md-button routerLink="/" href="/">
+    <md-icon>home</md-icon>
+    Home
   </button>
-  <button md-button onclick="window.location='http://www.linkedin.com/in/fredzqm';">
-    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-    LinkedIn
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+  <div fxLayout="row" fxHide fxShow.gt-sm>
+    <button md-button routerLink="/projects" href="/projects">
+      <md-icon>list</md-icon>
+      Projects
+    </button>
+    <button md-button routerLink="/about" href="/about">
+      <md-icon>star half</md-icon>
+      About
+    </button>
+    <button md-button routerLink="/resume" href="/resume">
+      <md-icon>assignment</md-icon>
+      Resume
+    </button>
+    <button md-button onclick="window.location='https://www.github.com/fredzqm';">
+      <i class="fa fa-github" aria-hidden="true"></i>
+      GitHub
+    </button>
+    <button md-button onclick="window.location='http://www.linkedin.com/in/fredzqm';">
+      <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+      LinkedIn
+    </button>
+  </div>
+  <button md-button [md-menu-trigger-for]="menu1" fxShow fxHide.gt-sm>
+    <md-icon>format_align_justify</md-icon>
   </button>
 </md-toolbar>
+<md-menu x-position="before" #menu1="mdMenu">
+  <button md-menu-item routerLink="/projects" href="/projects">
+    <md-icon>list</md-icon>
+    Projects
+  </button>
+  <button md-menu-item routerLink="/about" href="/about">
+    <md-icon>star half</md-icon>
+    About
+  </button>
+  <button md-menu-item routerLink="/resume" href="/resume">
+    <md-icon>assignment</md-icon>
+    Resume
+  </button>
+  <button md-menu-item class="useAwesomeFont" onclick="window.location='https://www.github.com/fredzqm';">
+    <md-icon><i class="fa fa-github" aria-hidden="true"></i></md-icon>
+    GitHub
+  </button>
+  <button md-menu-item class="useAwesomeFont" onclick="window.location='http://www.linkedin.com/in/fredzqm';">
+    <md-icon><i class="fa fa-linkedin-square" aria-hidden="true"></i></md-icon>
+    LinkedIn
+  </button>
+</md-menu>
