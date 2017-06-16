@@ -1,3 +1,4 @@
+<app-page-header title="{{'Project Gallery &gt; ' + project.name}}"></app-page-header>
 <div class="container" *ngIf="project">
   <div id="IntroCard" class="card">
     <a id="gitHubLink" md-mini-fab color="warn" href="{{'https://github.com/fredzqm/' + project.repos}}">
@@ -21,4 +22,5 @@
     <markdown-to-html src="{{'https://raw.githubusercontent.com/fredzqm/' + project.repos + '/master/README.md'}}"></markdown-to-html>
   </div>
 </div>
+<app-page-footer></app-page-footer>
 

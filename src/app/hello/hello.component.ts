@@ -10,7 +10,7 @@ import { PointCollection } from './pointCollection';
   	:host canvas {
   		width: 100%;
   		height: 100%;
-      background: url("../assets/yosemite.jpg") no-repeat center center fixed;
+      background: #030303;
   	}
   `]
 })

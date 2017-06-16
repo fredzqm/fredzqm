@@ -23,6 +23,7 @@ import {TruncatePipe} from './shared/trunc.pipe';
 import {Route} from './route.module';
 import {MarkdownToHtmlModule} from 'ng2-markdown-to-html';
 import { PageHeaderComponent } from './page-header/page-header.component';
+import { PageFooterComponent } from './page-footer/page-footer.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { PageHeaderComponent } from './page-header/page-header.component';
     ResumeComponent,
     ProjectCardComponent,
     PageHeaderComponent,
+    PageFooterComponent,
   ],
   imports: [
     BrowserModule,
