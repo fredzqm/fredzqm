@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {MdButtonModule, MdToolbarModule, MdTooltipModule, MdMenuModule, MdIconModule} from "@angular/material";
+import {MdButtonModule, MdToolbarModule, MdTooltipModule, MdMenuModule, MdIconModule, MdCardModule} from "@angular/material";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {PdfViewerComponent} from 'ng2-pdf-viewer';
@@ -54,6 +54,7 @@ import {PageFooterComponent} from './page-footer/page-footer.component';
     MdTooltipModule,
     MdMenuModule,
     MdIconModule,
+    MdCardModule,
     MarkdownToHtmlModule.forRoot(),
   ],
   providers: [ProjectService],
