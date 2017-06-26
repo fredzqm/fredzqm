@@ -6,3 +6,19 @@
 .about-row{
     padding-top: 7%;
 }
+
+.extra {
+  display: none;
+}
+
+.extraPlaceHolder {
+  display: inline-block;
+}
+
+p:hover .extra {
+  display: inline-block;
+}
+
+p:hover .extraPlaceHolder {
+  display: none;
+}
