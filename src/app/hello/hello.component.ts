@@ -1,12 +1,12 @@
-import { Component, OnInit, ViewChild, HostListener, Input } from '@angular/core';
-import { PointCollection } from './pointCollection';
+import {Component, OnInit, ViewChild, HostListener, Input} from '@angular/core';
+import {PointCollection} from './pointCollection';
 
 @Component({
   selector: 'app-hello',
   template: `
   <canvas #myCanvas class='chess-diag' [height]="height" [width]="width"></canvas>
   `,
-  styles:[`
+  styles: [`
   	:host canvas {
   		width: 100%;
   		height: 100%;
@@ -15,26 +15,28 @@ import { PointCollection } from './pointCollection';
   `]
 })
 export class HelloComponent implements OnInit {
-	pointCollectionList : PointCollection[] = [];
-  height : number = 600;
-  width : number = 2000;
+  pointCollectionList: PointCollection[] = [];
+  height: number = 600;
+  width: number = 2000;
 
-	@ViewChild("myCanvas") canvas;
+  @ViewChild("myCanvas") canvas;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
-  	let a = new PointCollection("Hello, I am  Fred  Zhang!",
-    {
-      left: this.width * 0.1 ,
-      right: this.width * 0.8 ,
-      top: this.height * 0.25,
-      buttom: this.height * 0.55
-    } , {
-      friction : 0.85,
-      rotationForce : 0.0,
-      springStrength : 0.1
-    });
+    let a = new PointCollection("Hello, I am  Fred  Zhang!",
+      {
+        left: this.width * 0.1,
+        right: this.width * 0.8,
+        top: this.height * 0.25,
+        buttom: this.height * 0.55
+      }, {
+        friction: 0.85,
+        rotationForce: 0.0,
+        springStrength: 0.1,
+        letterColors: ['red', 'orange', 'green', 'blue', 'purple']
+      });
     let aRepeat = () => {
       a.shake();
       setTimeout(aRepeat, 20);
@@ -44,16 +46,17 @@ export class HelloComponent implements OnInit {
 
 
     let b = new PointCollection("A passionate  programmer~~",
-    {
-      left: this.width * 0.3 ,
-      right: this.width * 0.9,
-      top: this.height * 0.67,
-      buttom: this.height * 0.8
-    } , {
-      friction : 0.85,
-      rotationForce : 0.0,
-      springStrength : 0.1
-    });
+      {
+        left: this.width * 0.3,
+        right: this.width * 0.9,
+        top: this.height * 0.67,
+        buttom: this.height * 0.8
+      }, {
+        friction: 0.85,
+        rotationForce: 0.0,
+        springStrength: 0.1,
+        letterColors: ['red', 'orange']
+      });
     let bRepeat = () => {
       b.update();
       setTimeout(bRepeat, 20);
@@ -78,9 +81,9 @@ export class HelloComponent implements OnInit {
 
   @HostListener('mousemove', ['$event'])
   onMousemove(e: MouseEvent) {
-  	let native = this.canvas.nativeElement;
-    let xPos = (e.pageX - native.offsetLeft) / native.offsetWidth *  this.width;
-    let yPos = (e.pageY - native.offsetTop)  / native.offsetHeight * this.height;
+    let native = this.canvas.nativeElement;
+    let xPos = (e.pageX - native.offsetLeft) / native.offsetWidth * this.width;
+    let yPos = (e.pageY - native.offsetTop) / native.offsetHeight * this.height;
     this.setAllMousePosition(xPos, yPos);
   }
 
