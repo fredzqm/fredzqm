@@ -9,12 +9,13 @@ img {
   top: 10px;
 }
 
-h1.card-title {
+.card-title {
+  color: #1E055F;
   font-family: 'Pangolin', cursive;
 }
 
 #IntroCard {
-  margin: 30px;
+  margin: 35px 0px;
 }
 
 #README {
