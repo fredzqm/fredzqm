@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Project} from '../shared/project';
 
 @Component({
@@ -9,12 +9,14 @@ import {Project} from '../shared/project';
     'class': 'col-sm-12 col-md-6 col-lg-4'
   }
 })
-export class ProjectCardComponent implements OnInit {
+export class ProjectCardComponent {
   @Input() project: Project;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
 
+  showRepos($event) {
+    window.open('https://github.com/fredzqm/' + this.project.repos, '_blank');
+    $event.stopPropagation();
+  }
 }

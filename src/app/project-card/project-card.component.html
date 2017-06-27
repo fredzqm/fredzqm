@@ -1,19 +1,13 @@
-<div class="card">
+<div class="card" [routerLink]="['/detail', project.id]">
   <img class="card-img-top img-thumbnail img-fluid" [src]="project.image" alt="Generic placeholder image">
   <div class="card-block">
     <h4 class="card-title">{{project.name}}</h4>
     <p>{{project.info | truncate}}</p>
   </div>
-  <a id="showDetails"
-     md-mini-fab color="primary"
-     [routerLink]="['/detail', project.id]"
-     mdTooltip="Show Details!"
-     mdTooltipPosition="before">
-    <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
-  </a>
   <a id="showRepos"
+     target="_new"
      md-mini-fab color="warn"
-     href="{{'https://github.com/fredzqm/'+project.repos}}"
+     (click)="showRepos($event)"
      mdTooltip="Show Repository!"
      mdTooltipPosition="before">
     <img alt="GitHub" class="docs-github-logo" src="assets/github-circle-black.svg">

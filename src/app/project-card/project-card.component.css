@@ -20,12 +20,6 @@
 #showRepos {
   position: absolute;
   right: 10px;
-  bottom: 60px;
-}
-
-#showDetails {
-  position: absolute;
-  right: 10px;
   bottom: 10px;
 }
 
