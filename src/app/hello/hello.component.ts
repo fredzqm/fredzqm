@@ -35,7 +35,7 @@ export class HelloComponent implements OnInit {
         friction: 0.85,
         rotationForce: 0.0,
         springStrength: 0.1,
-        letterColors: ['red', 'orange', 'green', 'blue', 'purple']
+        letterColors: ['#FFEA5A', '#000000', '#FF0000', '#920CE8', '#004FFF']
       });
     let aRepeat = () => {
       a.shake();

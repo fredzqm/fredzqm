@@ -72,10 +72,15 @@ class Point {
 }
 
 function hexToRgb(str) {
-  const color = convert.keyword.hsl(str);
-  if (color)
-      return color;
-  return convert.hex.hsl(str);
+  try {
+    if (str[0] === '#')
+      return convert.hex.hsl(str);
+    else
+      return convert.keyword.hsl(str);
+  } catch (e) {
+    console.log(str + " cannot be converted into color");
+    return [0, 0, 0];
+  }
 }
 
 export class PointCollection {
