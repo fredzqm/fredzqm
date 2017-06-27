@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, HostListener, Input} from '@angular/core';
+import {Component, OnInit, ViewChild, HostListener} from '@angular/core';
 import {PointCollection} from './pointCollection';
 
 @Component({
@@ -16,16 +16,16 @@ import {PointCollection} from './pointCollection';
 })
 export class HelloComponent implements OnInit {
   pointCollectionList: PointCollection[] = [];
-  height: number = 600;
-  width: number = 2000;
+  height = 600;
+  width = 2000;
 
-  @ViewChild("myCanvas") canvas;
+  @ViewChild('myCanvas') canvas;
 
   constructor() {
   }
 
   ngOnInit() {
-    let a = new PointCollection("Hello, I am  Fred  Zhang!",
+    const a = new PointCollection('Hello, I am  Fred  Zhang!',
       {
         left: this.width * 0.1,
         right: this.width * 0.8,
@@ -37,7 +37,7 @@ export class HelloComponent implements OnInit {
         springStrength: 0.1,
         letterColors: ['#FFEA5A', '#000000', '#FF0000', '#920CE8', '#004FFF']
       });
-    let aRepeat = () => {
+    const aRepeat = () => {
       a.shake();
       setTimeout(aRepeat, 20);
     };
@@ -45,7 +45,7 @@ export class HelloComponent implements OnInit {
     this.pointCollectionList.push(a);
 
 
-    let b = new PointCollection("A passionate  programmer~~",
+    const b = new PointCollection('A passionate  programmer~~',
       {
         left: this.width * 0.3,
         right: this.width * 0.9,
@@ -57,7 +57,7 @@ export class HelloComponent implements OnInit {
         springStrength: 0.1,
         letterColors: ['red', 'orange']
       });
-    let bRepeat = () => {
+    const bRepeat = () => {
       b.update();
       setTimeout(bRepeat, 20);
     };
@@ -68,10 +68,10 @@ export class HelloComponent implements OnInit {
   }
 
   startRepainter(interval: number) {
-    let repeat = () => {
-      let ctx = this.canvas.nativeElement.getContext("2d");
+    const repeat = () => {
+      const ctx = this.canvas.nativeElement.getContext('2d');
       ctx.clearRect(0, 0, this.width, this.height);
-      for (let pc of this.pointCollectionList) {
+      for (const pc of this.pointCollectionList) {
         pc.draw(ctx);
       }
       setTimeout(repeat, interval);
@@ -81,21 +81,21 @@ export class HelloComponent implements OnInit {
 
   @HostListener('mousemove', ['$event'])
   onMousemove(e: MouseEvent) {
-    let native = this.canvas.nativeElement;
-    let xPos = (e.pageX - native.offsetLeft) / native.offsetWidth * this.width;
-    let yPos = (e.pageY - native.offsetTop) / native.offsetHeight * this.height;
+    const native = this.canvas.nativeElement;
+    const xPos = (e.pageX - native.offsetLeft) / native.offsetWidth * this.width;
+    const yPos = (e.pageY - native.offsetTop) / native.offsetHeight * this.height;
     this.setAllMousePosition(xPos, yPos);
   }
 
   @HostListener('mouseleave', ['$event'])
   onMouseleave(e: MouseEvent) {
-    for (let pc of this.pointCollectionList) {
+    for (const pc of this.pointCollectionList) {
       pc.setMousePos(Number.MAX_VALUE, Number.MAX_VALUE);
     }
   }
 
   setAllMousePosition(xPos: number, yPos: number) {
-    for (let pc of this.pointCollectionList) {
+    for (const pc of this.pointCollectionList) {
       pc.setMousePos(xPos, yPos);
     }
   }

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Project} from '../shared/project';
-import {ActivatedRoute} from "@angular/router";
-import {ProjectService} from "../shared/project.service";
+import {ActivatedRoute} from '@angular/router';
+import {ProjectService} from '../shared/project.service';
 
 @Component({
   selector: 'app-project-detail',
@@ -15,7 +15,7 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    let id = +this.route.snapshot.params['id'];
+    const id = +this.route.snapshot.params['id'];
     this._projectService.getOneProject(id).then(project => this.project = project);
   }
 

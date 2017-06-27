@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ourProjects } from './projects';
-import {Project} from "./project";
+import {Project} from './project';
 
 @Injectable()
 export class ProjectService {

@@ -4,9 +4,9 @@ import {HomeComponent} from './home/home.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {AboutComponent} from './about/about.component';
 import {ErrorComponent} from './error/error.component';
-import {RouterModule, Routes} from "@angular/router";
-import {ResumeComponent} from "./resume/resume.component";
-import {ProjectDetailComponent} from "./project-detail/project-detail.component";
+import {RouterModule, Routes} from '@angular/router';
+import {ResumeComponent} from './resume/resume.component';
+import {ProjectDetailComponent} from './project-detail/project-detail.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},

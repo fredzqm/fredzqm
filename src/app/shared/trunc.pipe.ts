@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TruncatePipe implements PipeTransform {
     transform(value: string, args: string[]): any {
 
-        let text = value.substring(0, 180) + '...';
+        const text = value.substring(0, 180) + '...';
 
         return text;
 
