@@ -10,7 +10,7 @@ import {PointCollection} from './pointCollection';
   	:host canvas {
   		width: 100%;
   		height: 100%;
-      background: #030303;
+      background: #CAC4A8;
   	}
   `]
 })
@@ -35,7 +35,7 @@ export class HelloComponent implements OnInit {
         friction: 0.85,
         rotationForce: 0.0,
         springStrength: 0.1,
-        letterColors: ['#FFEA5A', '#000000', '#FF0000', '#920CE8', '#004FFF']
+        letterColors: ['#1E055F', '#2B136A', '#5D507F', '#4C0D67', '#41025C']
       });
     const aRepeat = () => {
       a.shake();
@@ -55,7 +55,7 @@ export class HelloComponent implements OnInit {
         friction: 0.85,
         rotationForce: 0.0,
         springStrength: 0.1,
-        letterColors: ['red', 'orange']
+        letterColors: ['#94990D', '#848900', '#B5B86C']
       });
     const bRepeat = () => {
       b.update();

@@ -7,8 +7,9 @@ footer {
   font-size: 14px;
   line-height: 16px;
   user-select: none;
+  color: #BAAE6C;
 }
 
 footer:hover {
-  color: #666;
+  color: #9A840D;
 }

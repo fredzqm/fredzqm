@@ -12,6 +12,10 @@
   margin-left: 20px;
 }
 
+.card-title {
+  color: #1E055F;
+  font-family: 'Pangolin', cursive;
+}
 
 #showRepos {
   position: absolute;

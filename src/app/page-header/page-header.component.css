@@ -2,4 +2,6 @@ header {
   height: 120px;
   user-select: none;
   font-family: 'Overpass', sans-serif;
+  color: #1E055F;
+  background: #CAC4A8;
 }
