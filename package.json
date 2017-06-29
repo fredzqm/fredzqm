@@ -27,14 +27,18 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.23",
+    "@types/react": "^15.0.33",
+    "@types/react-dom": "^15.5.1",
     "bootstrap": "^4.0.0-alpha.6",
     "color-convert": "^1.9.0",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "ng2-markdown-to-html": "^1.2.1",
     "ng2-pdf-viewer": "^1.1.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "rxjs": "^5.1.0",
-    "webpack": "^3.0.0",
+    "webpack": " 2.6.1",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -66,13 +70,13 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^4.1.1",
     "script-loader": "^0.7.0",
-    "source-map-loader": "^0.1.5",
+    "source-map-loader": "^0.2.1",
     "style-loader": "^0.13.1",
     "stylus-loader": "^2.4.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.2.0",
+    "typescript": "2.3.4",
     "url-loader": "^0.5.7",
-    "webpack-dev-server": "~2.3.0"
+    "webpack-dev-server": "2.4.5"
   }
 }
