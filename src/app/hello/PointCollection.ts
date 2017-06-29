@@ -94,7 +94,6 @@ export class PointCollection {
     for (const colorCode of config.letterColors) {
       letterColors.push(hexToRgb(colorCode));
     }
-    console.log(config.letterColors, letterColors);
     this.points = parsePoints(str, range, letterColors);
   }
 

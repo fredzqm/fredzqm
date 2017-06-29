@@ -1,0 +1,85 @@
+export const vendorImages = [{
+  href: 'https://angular.io/',
+  src: 'assets/images/angular.svg',
+  alt: 'angular'
+}, {
+  href: 'http://d3js.org/',
+  src: 'assets/images/d3.svg',
+  alt: 'd3'
+}, {
+  href: 'https://facebook.github.io/react/',
+  src: 'assets/images/react.svg',
+  alt: 'react'
+}, {
+  href: 'https://karma-runner.github.io',
+  src: 'assets/images/karma.png',
+  alt: 'karma'
+}, {
+  href: 'https://lodash.com/',
+  src: 'assets/images/lodash.png',
+  alt: 'lodash'
+}, {
+  href: 'http://gulpjs.com/',
+  src: 'assets/images/gulp.png',
+  alt: 'gulp'
+}, {
+  href: 'https://webpack.github.io',
+  src: 'assets/images/webpack.png',
+  alt: 'webpack'
+}, {
+  href: 'http://mochajs.org/',
+  src: 'assets/images/mocha.png',
+  alt: 'mocha'
+}, {
+  href: 'http://sass-lang.com/',
+  src: 'assets/images/sass.svg',
+  alt: 'sass'
+}, {
+  href: 'https://babeljs.io/',
+  src: 'assets/images/babel.png',
+  alt: 'babel'
+}, {
+  href: 'https://www.mongodb.org/',
+  src: 'assets/images/mongodb.svg',
+  alt: 'mongodb'
+}, {
+  href: 'https://nodejs.org/',
+  src: 'assets/images/nodejs.svg',
+  alt: 'nodejs'
+}, {
+  href: 'http://expressjs.com/',
+  src: 'assets/images/express.png',
+  alt: 'express'
+}, {
+  href: 'http://socket.io/',
+  src: 'assets/images/socketio.svg',
+  alt: 'socketio'
+}, {
+  href: 'https://www.npmjs.com/',
+  src: 'assets/images/npm.svg',
+  alt: 'npm'
+}, {
+  href: 'http://github.com/',
+  src: 'assets/images/github.png',
+  alt: 'github'
+}, {
+  href: 'https://www.docker.com/',
+  src: 'assets/images/docker.svg',
+  alt: 'docker'
+}, {
+  href: 'http://kubernetes.io/',
+  src: 'assets/images/kubernetes.svg',
+  alt: 'kubernetes'
+}, {
+  href: 'https://cloud.google.com/',
+  src: 'assets/images/gcp.svg',
+  alt: 'gcp'
+}, {
+  href: 'https://circleci.com/',
+  src: 'assets/images/circleci.svg',
+  alt: 'circleci'
+}, {
+  href: 'https://www.jetbrains.com/webstorm/',
+  src: 'assets/images/webstorm.svg',
+  alt: 'WebStorm'
+}];

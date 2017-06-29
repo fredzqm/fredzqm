@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ProjectService} from '../shared/project.service';
 import {Project} from '../shared/project';
 import {Router} from '@angular/router';
-import {Hello} from './reactComponent';
+import {StoneCutter} from './reactComponent';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
       .then(projects => this.projects = projects);
 
     ReactDOM.render(
-      <Hello></Hello>,
+      <StoneCutter></StoneCutter>,
       document.getElementById("xxx")
     );
   }
