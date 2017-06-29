@@ -1,4 +1,5 @@
-ng build --output-path dist
+rm -rf ./dist
+yarn build
 cd dist
 git init
 git remote add origin https://github.com/fredzqm/fredzqm.github.io
