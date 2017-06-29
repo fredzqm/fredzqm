@@ -14,11 +14,7 @@ import * as ReactDOM from "react-dom";
 export class HomeComponent implements OnInit {
   projects: Project[];
 
-  constructor(public _projectService: ProjectService, public router: Router) {
-  }
-
-  chooseProject(project) {
-    this.router.navigate(['detail', project.id]);
+  constructor(public _projectService: ProjectService) {
   }
 
   ngOnInit() {
@@ -27,7 +23,7 @@ export class HomeComponent implements OnInit {
       .then(projects => this.projects = projects);
 
     ReactDOM.render(
-      <Hello compiler="Fred" framework="Angular"> </Hello>,
+      <Hello></Hello>,
       document.getElementById("xxx")
     );
   }
