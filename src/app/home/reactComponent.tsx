@@ -3,6 +3,10 @@ import * as React from 'react';
 import {CSSGrid, measureItems, makeResponsive, layout} from 'react-stonecutter';
 import {vendorImages} from './vender-images';
 
+interface StoneCutterProperty {
+  width: number;
+}
+
 const Grid = makeResponsive(measureItems(CSSGrid, {measureImages: true}), {
   maxWidth: 1920,
   minPadding: 100
@@ -10,37 +14,42 @@ const Grid = makeResponsive(measureItems(CSSGrid, {measureImages: true}), {
 
 export class StoneCutter extends React.Component<any, any> {
   render() {
-    const gridstyle = {
+    const gridStyle = {
       "font-size": "0.75rem",
-      "padding": "10px",
+      "padding": "7px",
     };
     const imageStyles = {
-      "max-height": "230px",
-      "width": "230px"
+      "max-height": "150px",
+      "width": "150px"
     }
 
     let imageArray = vendorImages.map((image, i) =>
-      <li className="grid-item" key={i} style={gridstyle}>
+      <li className="grid-item" key={i} style={gridStyle}>
         <a href={image.href}>
           <img src={image.src} alt={image.alt} style={imageStyles}/>
         </a>
       </li>
     );
 
-    const x = (
+    const gridStyles =  {
+      'list-style': 'none',
+      'padding': '0',
+      'margin': '0 auto'
+    };
+
+    return (
       <Grid
-        className="grid"
         component="ul"
         columnWidth={250}
         gutterWidth={5}
         gutterHeight={5}
         layout={layout.pinterest}
         duration={500}
-        easing="ease-out">
+        easing="ease-out"
+        style={gridStyles}
+      >
         {imageArray}
       </Grid>
     );
-    console.log(x);
-    return x;
   }
 }
