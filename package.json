@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "webpack-dev-server --port=4200 --inline --hot",
+    "start": "webpack-dev-server --port=4200 --inline --hot --history-api-fallback --open",
     "build": "webpack",
     "deploy": "bash ./pre-push.th",
     "test": "karma start ./karma.conf.js",
