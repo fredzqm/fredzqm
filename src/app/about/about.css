@@ -2,18 +2,32 @@
     padding-top: 7%;
 }
 
-.extra {
-  display: none;
+p {
+  text-indent: 50px;
 }
 
-.extraPlaceHolder {
-  display: inline-block;
+div.collapsible-header {
+  font-size: 32px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: bold;
+  line-height: 2.5em;
 }
 
-p:hover .extra {
-  display: inline-block;
+div.collapsible-body {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
 
-p:hover .extraPlaceHolder {
-  display: none;
+ol li {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+
+div.collapsible-header a {
+  margin-left: 0.7em;
+}
+
+div.collapsible-header a img {
+  height: 35px;
 }

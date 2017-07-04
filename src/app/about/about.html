@@ -5,62 +5,156 @@
       <img class="img-fluid img-thumbnail rounded" src="assets/photo.png" alt="Generic placeholder image">
     </div>
     <div class="col-sm-9">
-      <ul materialize="collapsible" class="collapsible popout" data-collapsible="accordion">
+      <ul materialize="collapsible" class="collapsible popout" data-collapsible="expandable">
         <li>
-          <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>First</div>
+          <div class="collapsible-header active">Overview
+            <a class="right" href="http://www.rose-hulman.edu/" target="_blank"><img src="assets/rose-hulman.png"></a>
+          </div>
           <div class="collapsible-body">
             <p>
-              My name is Fred Zhang, a <span mdTooltip="Computer science" mdTooltipPosition="above">CS</span>/<span mdTooltip="Software engineering" mdTooltipPosition="above">SE</span>/<span mdTooltip="Computer engineering" mdTooltipPosition="above">CPE</span>
-              senior at <a href="http://www.rose-hulman.edu" target="_blank">Rose-Hulman</a> with 4.0 perfect GPA in all major related courses.
-              I will graduate in May 2018 and am seeking for full-time software engineer positions.
+              I am Fred Zhang, a <span mdTooltip="Computer science" mdTooltipPosition="above">CS</span>/<span mdTooltip="Software engineering" mdTooltipPosition="above">SE</span>/<span mdTooltip="Computer engineering" mdTooltipPosition="above">CPE</span>
+              senior at <a href="http://www.rose-hulman.edu" target="_blank">Rose-Hulman</a> with 4.0 GPA in all major related courses.
+              I will graduate in May 2018 and seek for full-time software engineer positions.
+              I started Rose with zero programming experience as an <span mdTooltip="Electrical engineering" mdTooltipPosition="above">EE</span>.
+              In my freshmen year at Rose, I found myself fascinated by smart algorithms and how much and how quickly I can do just by programming, so I switched my major.
             </p>
+            <p>
+              Life at Rose-Hulman aren't so easy, which means I will leave fully equipped.
+              I see every single course project as an opportunity to learn new technologies, so I always try something different each time.
+              Therefore, I know so many <a routerLink="/home">new technologies</a>.
+              As I wrote more codes, I found two things that excite me the most:
+            </p>
+            <ol>
+              <li>Data, Data, Data!!</li>
+              <li>Extensible software</li>
+            </ol>
           </div>
         </li>
         <li>
-          <div class="collapsible-header"><i class="mdi-maps-place"></i>Second</div>
-          <div class="collapsible-body">
-            <p>
-              As an overview of my technical skills, I am familiar with most common programming languages, including Java, C++, Javascript, Python,
-              <span class="extraPlaceHolder">etc.</span>
-              <span class="extra">C, C#, Typescript, Swift, PHP, MATLAB, Scheme, MIPS assembly</span>
-            </p>
+          <div class="collapsible-header">Internship At Groupon
+            <a class="right" href="https://www.mysql.com/" target="_blank"><img src="assets/mysql.png"></a>
+            <a class="right" href="https://www.groupon.com" target="_blank"><img src="assets/groupon-g.png"></a>
           </div>
-        </li>
-        <li>
-          <div class="collapsible-header"><i class="mdi-social-whatshot"></i>Third</div>
-          <div class="collapsible-body">
-            <p>
-              I am a big fan of <b>Hadoop</b> ecosystem and <b>MapReduce</b>. It is an incredible ecosystem with so many <i>“cute animals”</i> to help us out.
-              To name a few, I enjoy working with Pig, Hive, Hbase, Solr, Oozie, Sqoop, Zookeeper.
-              I learned about Spark, Storm, Kafka and their ability to work with data in real-time.
-              I believe that any scalable system must be backed by a distributed file system like HDFS and use MapReduce to scale batch processing horizontally.
-              In short, I want to build robust and scalable system to manage big data.
-              In addition, I would be eager to work on any scalable real-time system, because designing and managing trade-offs among CAPs are one of my fascination.
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="collapsible-header"><i class="mdi-action-android"></i>Sample</div>
           <div class="collapsible-body">
             <p>
               This summer (2017), I am interning at <a href="https://www.groupon.com">Groupon</a> in Seattle.
-              I am happy that I got work on an inventory supply team and learned so much about development and deployment practice within a service-based architecture. My intern project is removing one external dependency of our service by creating new endpoints and migrating data. Working on a deployed system is so much different from a course project. Every deployment involving changes in API or workflow requires extreme caution and meticulous rollback planning. I am so glad I have a wonderful team that guided me to complete this project. As for technical aspects, I strength my database skills and ability to write high-quality codes. I also become familiar with agile processes and task management tools like JIRA.
+              I am happy that I got work on an inventory supply team and learned so much about development and deployment practice within a <b>microservice architecture</b>.
+              My intern project is removing one external dependency of our service by creating new endpoints and migrating data.
+              I worked on mysql migration scripts, Java Ebeans entities and API updates.
+              Working on a deployed system is so much different from a course project.
+              Every deployment involving changes in API or workflow requires extreme caution.
+              To mitigate the risks, we have to come up with meticulous rollback planning in case something goes wrong.
+              I also become familiar with <b>agile process</b> and task management tools like JIRA.
+            </p>
+            <p>
+              I feel so lucky to have so many wonderful teammates who help and guide me through this internship.
+              I learned so much in the discussions with my mentors and teammates.
+              Intern life at Groupon in Seattle is so fun. I enjoyed Seattle sea foods and roof top grills with friends.
+              I am actually surprised by how much free time I have after work. Perhaps I worked too hard at Rose,
+              but I am so looking forward to my life after graduation!
             </p>
           </div>
         </li>
         <li>
-          <div class="collapsible-header"><i class="mdi-action-bookmark"></i>Material</div>
+          <div class="collapsible-header">Go Data!
+            <a class="right" href="https://hive.apache.org/" target="_blank"><img src="assets/hive.png"></a>
+            <a class="right" href="https://pig.apache.org/" target="_blank"><img src="assets/pig.png"></a>
+            <a class="right" href="http://hadoop.apache.org/" target="_blank"><img src="assets/hadoop.png"></a>
+          </div>
           <div class="collapsible-body">
             <p>
-              Besides all of these experiences, I also have many experiences with popular web development frameworks, like Angular, React, Spring Boot, ASP.NET.
-              I built this website with Angular4 with a few React library (<a href="https://www.npmjs.com/package/react-stonecutter">react-stonecutter</a>).
-              I had done many web application with Node, Webpack and Firebase. I like both Angular and React, especially when React component can live elegantly within an Angular app.
-              It would be one of my dreams position to contribute to those fantastic frameworks and help the community.
+              I am a huge fan of <b>Hadoop</b> ecosystem and <b>MapReduce</b> after I took the class with <a href="http://www.rose-hulman.edu/academics/faculty/mohan-sriram-mohan.html">Sriram</a>.
+              It is an incredible growing community with so many <i>“cute animals”</i> to help us out.
+              To name a few, I enjoy working with Pig, Hive, Hbase, Solr, Oozie, Sqoop, Zookeeper.
+              I learned about Spark, Storm, Kafka and their ability to work with data in real-time.
+              I use hive and pig to build classic shortest path finding engine using data set from <a href="https://wiki.openstreetmap.org/wiki/Main_Page">Open street map</a>.
+            </p>
+            <p>
+              In the information era, I believe that traditional relational database can no longer scale in the era of the data explosion.
+              To guarantee reliability, we need distributed file systems like <span mdTooltip="Hadoop distributed file system" mdTooltipPosition="above">HDFS</span> or GFS.
+              With DFS, we can have luxury of storing the complete history view, and using MapReduce to extract any data we want.
+              I am very excited for those advancements and want to build a robust and scalable system.
+              In addition, when the system is required to be highly available real-time system, the trade-offs among <span mdTooltip="Consistency" mdTooltipPosition="above">C</span> and <span mdTooltip="Tolerant for network partition" mdTooltipPosition="above">P</span> become fascinating.
             </p>
           </div>
         </li>
         <li>
-          <div class="collapsible-header"><i class="mdi-action-extension"></i>Style</div>
+          <div class="collapsible-header">Design Extensible Software
+            <span class="right">Gang of Four</span>
+          </div>
+          <div class="collapsible-body">
+            <p>
+              I freaks out when coding becomes robotic-like chores.
+              Here are two examples from both work and school. All of them have logical design and are used for many years.
+              However, I do not like them because making changes involves tedious and repetitive work.
+              The bad code smell here specifically is shotgun surgery.
+            </p>
+            <ol>
+              <li>
+                In order to add an additional attribute in an entity,
+                <ol>
+                  <li>Add it to the database table</li>
+                  <li>Add it to the Java entity class</li>
+                  <li>Add it to the Typescript entity class</li>
+                  <li>Add it to the Python entity class</li>
+                  <li>Add support in the manager class for this entity</li>
+                  <li>......</li>
+                </ol>
+                Why not create a library that generates cross-languages entities and serialization codes?
+                So we only need to modify one file and the rest is auto-generated.
+                In fact, thanks to Google, we have <a href="https://github.com/google/protobuf">protobuf</a> that does exactly this.
+              </li>
+              <br />
+              <li>
+                In order to add support for new syntax in this interpreter,
+                <ol>
+                  <li>Add a new data type to represent this syntax</li>
+                  <li>Add an additional case in expression parsing phase</li>
+                  <li>Add an additional case in interpreting phase</li>
+                </ol>
+                Why not create a interface called Syntax with two method parse() and interpret()?
+                So we can group coupled procedures in the same place.
+                I was facing similar issues in my <a href="https://github.com/fredzqm/Scheme_interpreter">Scheme Interpreter</a>, and ended in another way.
+              </li>
+              <br />
+            </ol>
+            <p>
+              My point is that software design matters. A good design saves development time and headaches when requirement changes.
+              I learned so much about design principals and patterns from <a href="http://www.rose-hulman.edu/academics/course-catalog/current/programs/Computer%20Science/csse-374.html">Software design course</a> of <a href="https://www.rose-hulman.edu/academics/faculty/hays-mark-hays.html">Dr. Hays</a>.
+              I want to work on extensible software that can grows, in particular libraries or frameworks used by a community.
+              I want make impacts by applying design techniques to improve the productivity of the whole community.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">Web Development
+            <a class="right" href="https://firebase.google.com/" target="_blank"><img src="assets/firebase.png"></a>
+            <a class="right" href="https://facebook.github.io/react/" target="_blank"><img src="assets/react.png"></a>
+            <a class="right" href="https://angular.io/" target="_blank"><img src="assets/images/angular.png"></a>
+            <a class="right" href="https://nodejs.org/en/" target="_blank"><img src="assets/nodejs.png"></a>
+          </div>
+          <div class="collapsible-body">
+            <p>
+              After many course projects, I also gathered quite web development experience.
+              Many people prefer Angular or React over the other. To me, they are very different. Angular is a framework, while React is a library.
+              I love them both especially when you can easily use React component within an Angular App.
+              In fact, I build this website with Angular, but also uses a few React library, like <a href="https://www.npmjs.com/package/react-stonecutter">react-stonecutter</a>.
+            </p>
+            <p>
+              For other common platforms, I also worked with Android, Chrome extension, ASP.NET and Spring Boot.
+              Web development is such a rapid-growing area with numerous node packages for us to choose.
+              One thing that I used quite often is Firebase. As a NoSQL database with real-time within built-in event event broadcasting and off-line support,
+              Firebase makes building application that only needs CRUD operations so easy.
+              I also used Firebase messaging for my Android app -- <a href="https://github.com/fredzqm/Jobee">Jobee</a>.
+            </p>
+            <p>
+              I had some web development experience, but I am not very particularly into building websites as a full-time position.
+              However, I am always excited if I can contribute to those frameworks and libraries to help improve the community.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">Project</div>
           <div class="collapsible-body">
             <p>
               It is hard to get to know me until you see the projects I worked.
