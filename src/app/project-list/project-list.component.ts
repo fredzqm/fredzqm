@@ -4,8 +4,8 @@ import {Project} from '../shared/project';
 import {Router}    from '@angular/router';
 
 @Component({
-  templateUrl: './projects.html',
-  styleUrls: ['./projects.css']
+  templateUrl: './project-list.html',
+  styleUrls: ['./project-list.css']
 })
 
 export class ProjectsComponent implements OnInit {

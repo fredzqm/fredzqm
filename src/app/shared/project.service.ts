@@ -6,12 +6,12 @@ import {Project} from './project';
 export class ProjectService {
     projectPromise = Promise.resolve(ourProjects);
 
-    getProjects() : Promise<Project[]>{
+    getProjects(): Promise<Project[]> {
         return this.projectPromise;
     }
 
-    getOneProject(id: number | string) : Promise<Project> {
+    getOneProject(id: number | string): Promise<Project> {
          return this.projectPromise
-            .then(project => project.find(project => project.id === +id));
+            .then(project => project.find(p => p.id === +id));
     }
 }

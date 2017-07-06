@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 
 import {HomeComponent} from './home/home.component';
-import {ProjectsComponent} from './projects/projects.component';
+import {ProjectsComponent} from './project-list/project-list.component';
 import {AboutComponent} from './about/about.component';
 import {ErrorComponent} from './error/error.component';
 import {RouterModule, Routes} from '@angular/router';
