@@ -197,7 +197,7 @@ module.exports = {
         "img"
       ],
       "globOptions": {
-        "cwd": "C:/Users/zhang/Documents/GitHub/fredzqm/src",
+        "cwd": "./src",
         "dot": true,
         "ignore": "**/.gitkeep"
       }
