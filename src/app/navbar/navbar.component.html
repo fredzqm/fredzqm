@@ -1,8 +1,9 @@
 <md-toolbar color="primary">
-  <button md-button routerLink="/" href="/">
+  <button md-button routerLink="/" href="/" fxHide fxShow.gt-md>
     <md-icon>home</md-icon>
     Home
   </button>
+  <md-icon routerLink="/" href="/" fxShow fxHide.gt-md>home</md-icon>
   <!-- This fills the remaining space of the current row -->
   <span class="fill-remaining-space"></span>
   <div fxLayout="row" fxHide fxShow.gt-sm>
@@ -27,14 +28,14 @@
       LinkedIn
     </button>
   </div>
-  <button md-button [md-menu-trigger-for]="menu1" fxShow fxHide.gt-sm>
-    <md-icon>format_align_justify</md-icon>
-  </button>
+  <md-icon md-button [md-menu-trigger-for]="menu1" fxShow fxHide.gt-sm>
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </md-icon>
 </md-toolbar>
 <md-menu x-position="before" #menu1="mdMenu">
   <button md-menu-item routerLink="/projects" href="/projects">
     <md-icon>list</md-icon>
-    Projects
+      Projects
   </button>
   <button md-menu-item routerLink="/about" href="/about">
     <md-icon>star half</md-icon>

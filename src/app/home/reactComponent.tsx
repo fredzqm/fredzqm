@@ -9,7 +9,7 @@ interface StoneCutterProperty {
 
 const Grid = makeResponsive(measureItems(CSSGrid, {measureImages: true}), {
   maxWidth: 1920,
-  minPadding: 100
+  minPadding: 0
 });
 
 export class StoneCutter extends React.Component<any, any> {
