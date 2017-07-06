@@ -1,5 +1,5 @@
 <app-page-header title="{{'Project Gallery &gt; ' + project.name}}"></app-page-header>
-<div class="container" *ngIf="project">
+<div class="container">
   <div id="IntroCard" class="card">
     <a id="gitHubLink" md-mini-fab color="warn" href="{{'https://github.com/fredzqm/' + project.repos}}">
       <img alt="GitHub" class="docs-github-logo" src="assets/github-circle-black.svg">
@@ -18,6 +18,7 @@
       </div>
     </div>
   </div>
+  <div #customizable></div>
   <div id="README" class="card">
     <h1 class="card-title text-center">README</h1>
     <br>
