@@ -15,24 +15,24 @@ const Grid = makeResponsive(measureItems(CSSGrid, {measureImages: true}), {
 export class StoneCutter extends React.Component<any, any> {
   render() {
     const gridStyle = {
-      "font-size": "0.75rem",
+      "fontSize": "0.75rem",
       "padding": "7px",
     };
     const imageStyles = {
-      "max-height": "150px",
+      "maxHeight": "150px",
       "width": "150px"
     }
 
     let imageArray = vendorImages.map((image, i) =>
       <li className="grid-item" key={i} style={gridStyle}>
-        <a href={image.href}>
+        <a href={image.href} target="_blank">
           <img src={image.src} alt={image.alt} style={imageStyles}/>
         </a>
       </li>
     );
 
     const gridStyles =  {
-      'list-style': 'none',
+      'listStyle': 'none',
       'padding': '0',
       'margin': '0 auto'
     };

@@ -21,3 +21,9 @@
 app-hello {
   height: 600px;
 }
+
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 3em;
+  line-height: 4em;
+}
