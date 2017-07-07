@@ -1,4 +1,5 @@
 import {ReactElement} from 'react';
+import {Type} from '@angular/core';
 
 export interface Project {
     id: number;
@@ -6,6 +7,6 @@ export interface Project {
     info: string;
     image: string;
     repos: string;
-    detailComponent: ReactElement<{}>;
+    detailComponent: Type<any>;
 }
 
