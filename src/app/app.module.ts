@@ -12,11 +12,11 @@ import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {ResumeComponent} from './resume/resume.component';
 import {ProjectService} from './shared/project.service';
-import {ProjectDetailComponent} from './project-detail/project-detail.component';
+import {ProjectDetailComponent, ProjectDetailRoutingComponent} from './project-detail/project-detail.component';
 import {ProjectCardComponent} from './project-list/project-card/project-card.component';
 import {HelloComponent} from './hello/hello.component';
 import {HomeComponent} from './home/home.component';
-import {ProjectsComponent} from './project-list/project-list.component';
+import {ProjectListComponent} from './project-list/project-list.component';
 import {AboutComponent} from './about/about.component';
 import {ErrorComponent} from './error/error.component';
 import {TruncatePipe} from './shared/trunc.pipe';
@@ -30,9 +30,10 @@ import {PageFooterComponent} from './page-footer/page-footer.component';
   declarations: [
     AppComponent,
     ProjectDetailComponent,
+    ProjectDetailRoutingComponent,
     HelloComponent,
     HomeComponent,
-    ProjectsComponent,
+    ProjectListComponent,
     AboutComponent,
     ErrorComponent,
     TruncatePipe,

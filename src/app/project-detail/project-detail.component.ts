@@ -1,11 +1,9 @@
 import {
-  AfterContentInit, Component, ComponentFactoryResolver, Input, OnInit, ViewChild,
-  ViewContainerRef
+  AfterContentInit, Component, ComponentFactoryResolver, Input, OnInit, ViewChild, ViewContainerRef
 } from '@angular/core';
 import {Project} from '../shared/project';
 import {ActivatedRoute} from '@angular/router';
 import {ProjectService} from '../shared/project.service';
-import * as ReactDOM from 'react-dom';
 
 @Component({
   selector: 'app-project-detail',
@@ -13,22 +11,51 @@ import * as ReactDOM from 'react-dom';
   styleUrls: ['./project-detail.component.css']
 })
 export class ProjectDetailComponent implements AfterContentInit {
-  @Input() project: Project;
+  _project: Project;
+  @Input() set project(project: Project) {
+    this._project = project;
+    this.updateCustomizedComponent();
+  }
 
-  @ViewChild('customizable', { read: ViewContainerRef})
-  custimizableDirective: ViewContainerRef;
+  get project(): Project {
+    return this._project;
+  }
 
-  constructor(private route: ActivatedRoute,
-              private _projectService: ProjectService,
-              private componentFactoryResolver: ComponentFactoryResolver) {
+  @ViewChild('customizable', {read: ViewContainerRef})
+  custimizableComponent: ViewContainerRef;
+
+  constructor(private componentFactoryResolver: ComponentFactoryResolver) {
   }
 
   ngAfterContentInit() {
+    this.updateCustomizedComponent();
+  }
+
+  updateCustomizedComponent() {
+    if (this.project) {
+      this.custimizableComponent.clear();
+      this.custimizableComponent.createComponent(this.componentFactoryResolver.resolveComponentFactory(this.project.detailComponent));
+    }
+  }
+
+}
+
+@Component({
+  template: `
+    <app-project-detail [project]="project"></app-project-detail>
+  `
+})
+export class ProjectDetailRoutingComponent implements OnInit {
+  project: Project;
+
+  constructor(private route: ActivatedRoute,
+              private _projectService: ProjectService) {
+  }
+
+  ngOnInit() {
     const id = +this.route.snapshot.params['id'];
     this._projectService.getOneProject(id).then(project => {
       this.project = project;
-      this.custimizableDirective.clear();
-      this.custimizableDirective.createComponent(this.componentFactoryResolver.resolveComponentFactory(this.project.detailComponent));
     });
   }
 }

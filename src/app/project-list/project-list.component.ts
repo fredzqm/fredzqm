@@ -8,7 +8,7 @@ import {Router}    from '@angular/router';
   styleUrls: ['./project-list.css']
 })
 
-export class ProjectsComponent implements OnInit {
+export class ProjectListComponent implements OnInit {
 
   projects: Project[];
 
