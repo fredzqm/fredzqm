@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {CSSGrid, measureItems, makeResponsive, layout} from 'react-stonecutter';
-import {vendorImages} from './vender-images';
+import {Technology} from './technology';
 
 interface StoneCutterProperty {
-  width: number;
+  technologies: Technology[];
 }
 
 const Grid = makeResponsive(measureItems(CSSGrid, {measureImages: true}), {
@@ -11,7 +11,7 @@ const Grid = makeResponsive(measureItems(CSSGrid, {measureImages: true}), {
   minPadding: 0
 });
 
-export class StoneCutter extends React.Component<any, any> {
+export class StoneCutter extends React.Component<StoneCutterProperty, any> {
   render() {
     const gridStyle = {
       'fontSize': '0.75rem',
@@ -22,10 +22,10 @@ export class StoneCutter extends React.Component<any, any> {
       'width': '150px'
     };
 
-    const imageArray = vendorImages.map((image, i) =>
+    const imageArray = this.props.technologies.map((image, i) =>
       <li className='grid-item' key={i} style={gridStyle}>
         <a href={image.href} target='_blank'>
-          <img src={image.src} alt={image.alt} style={imageStyles}/>
+          <img src={image.src} alt={image.name} style={imageStyles}/>
         </a>
       </li>
     );

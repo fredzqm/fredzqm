@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Project} from "../project";
-import {HomeComponent} from "../../home/home.component";
 
 @Component({
   selector: 'app-chess-project',
@@ -19,7 +18,8 @@ export const chessProject:Project = {
   id: 1,
   name: 'Chess',
   information: '',
-  overview: `I love playing chess and I had so many free time in my <span mdTooltip="(They do not let my overload)" mdTooltipPosition="above">first quarter at Rose</span>, so I started this personal project.
+  overview: `
+      I love playing chess and I had so many free time in my <span mdTooltip="(They do not let my overload)" mdTooltipPosition="above">first quarter at Rose</span>, so I started this personal project.
   The code written by an newbie was functional but <a href="https://github.com/fredzqm/Chess/commit/7309b6d03c102e0c8ae55f55804d83edbef38d71">not so great in quality</a>.
 In sophomore year thanksgiving break, I learned MVC pattern and realized that bad design was the reason it became so difficult to add new features to this project.
   I spent that week refactoring the code base into MVC pattern because I wanted to <a href="https://github.com/fredzqm/Chess/tree/ad5c9799e86579013170935618965c59cdbb7b11">make it great and add more features</a>.

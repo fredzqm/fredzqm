@@ -27,7 +27,7 @@ import {PageHeaderComponent} from './page-header/page-header.component';
 import {PageFooterComponent} from './page-footer/page-footer.component';
 
 import {ourProjects} from './projects/projects';
-import {ChessProjectComponent} from "./projects/chess-project/chess-project.component";
+import {TechnologyService} from './technology.service';
 
 const projectDetailComponentList = [];
 for (const project of ourProjects) {
@@ -70,7 +70,7 @@ for (const project of ourProjects) {
     MarkdownToHtmlModule.forRoot(),
     MaterializeModule
   ],
-  providers: [ProjectService],
+  providers: [ProjectService, TechnologyService],
   bootstrap: [AppComponent],
   entryComponents: projectDetailComponentList
 })
