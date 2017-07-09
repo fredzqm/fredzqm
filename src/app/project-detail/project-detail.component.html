@@ -13,7 +13,8 @@
              [src]="project.image"
              [alt]="project.name">
         <div class="card-text media-body align-self-center col-8" height="100%">
-          {{project.info}}
+          <div #overview>{{project.info}}div>
+          </div>
         </div>
       </div>
     </div>

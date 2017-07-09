@@ -11,7 +11,7 @@ import {PdfViewerComponent} from 'ng2-pdf-viewer';
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {ResumeComponent} from './resume/resume.component';
-import {ProjectService} from './shared/project.service';
+import {ProjectService} from './projects/project.service';
 import {ProjectDetailComponent, ProjectDetailRoutingComponent} from './project-detail/project-detail.component';
 import {ProjectCardComponent} from './project-list/project-card/project-card.component';
 import {HelloComponent} from './hello/hello.component';
@@ -19,12 +19,13 @@ import {HomeComponent} from './home/home.component';
 import {ProjectListComponent} from './project-list/project-list.component';
 import {AboutComponent} from './about/about.component';
 import {ErrorComponent} from './error/error.component';
-import {TruncatePipe} from './shared/trunc.pipe';
+import {TruncatePipe} from './trunc.pipe';
 
 import {Route} from './route.module';
 import {MarkdownToHtmlModule} from 'ng2-markdown-to-html';
 import {PageHeaderComponent} from './page-header/page-header.component';
 import {PageFooterComponent} from './page-footer/page-footer.component';
+import {ChessProjectComponent} from './projects/chess-project/chess-project.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {PageFooterComponent} from './page-footer/page-footer.component';
     ProjectCardComponent,
     PageHeaderComponent,
     PageFooterComponent,
+    ChessProjectComponent,
   ],
   imports: [
     BrowserModule,

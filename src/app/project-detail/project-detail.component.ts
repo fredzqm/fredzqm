@@ -1,9 +1,9 @@
 import {
   AfterContentInit, Component, ComponentFactoryResolver, Input, OnInit, ViewChild, ViewContainerRef
 } from '@angular/core';
-import {Project} from '../shared/project';
+import {Project} from '../projects/project';
 import {ActivatedRoute} from '@angular/router';
-import {ProjectService} from '../shared/project.service';
+import {ProjectService} from '../projects/project.service';
 
 @Component({
   selector: 'app-project-detail',
@@ -21,6 +21,9 @@ export class ProjectDetailComponent implements AfterContentInit {
     return this._project;
   }
 
+  @ViewChild('overview', {read: ViewContainerRef})
+  overViewComponent: ViewContainerRef;
+
   @ViewChild('customizable', {read: ViewContainerRef})
   custimizableComponent: ViewContainerRef;
 
@@ -33,8 +36,14 @@ export class ProjectDetailComponent implements AfterContentInit {
 
   updateCustomizedComponent() {
     if (this.project) {
-      this.custimizableComponent.clear();
-      this.custimizableComponent.createComponent(this.componentFactoryResolver.resolveComponentFactory(this.project.detailComponent));
+      if (this.project.detailComponent) {
+        this.custimizableComponent.clear();
+        this.custimizableComponent.createComponent(this.componentFactoryResolver.resolveComponentFactory(this.project.detailComponent));
+      }
+      if (this.project.overViewComponent) {
+        this.overViewComponent.clear();
+        this.overViewComponent.createComponent(this.componentFactoryResolver.resolveComponentFactory(this.project.detailComponent));
+      }
     }
   }
 
