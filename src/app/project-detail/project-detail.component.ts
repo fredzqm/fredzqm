@@ -21,9 +21,6 @@ export class ProjectDetailComponent implements AfterContentInit {
     return this._project;
   }
 
-  @ViewChild('overview', {read: ViewContainerRef})
-  overViewComponent: ViewContainerRef;
-
   @ViewChild('customizable', {read: ViewContainerRef})
   custimizableComponent: ViewContainerRef;
 
@@ -40,18 +37,13 @@ export class ProjectDetailComponent implements AfterContentInit {
         this.custimizableComponent.clear();
         this.custimizableComponent.createComponent(this.componentFactoryResolver.resolveComponentFactory(this.project.detailComponent));
       }
-      if (this.project.overViewComponent) {
-        this.overViewComponent.clear();
-        this.overViewComponent.createComponent(this.componentFactoryResolver.resolveComponentFactory(this.project.detailComponent));
-      }
     }
   }
-
 }
 
 @Component({
   template: `
-    <app-project-detail [project]="project"></app-project-detail>
+    <app-project-detail *ngIf="project" [project]="project"></app-project-detail>
   `
 })
 export class ProjectDetailRoutingComponent implements OnInit {

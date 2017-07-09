@@ -13,18 +13,12 @@
              [src]="project.image"
              [alt]="project.name">
         <div class="card-text media-body align-self-center col-8" height="100%">
-          <div #overview>{{project.info}}div>
-          </div>
+          <div *ngIf="project.overview" [innerHTML]="project.overview"></div>
+          <div *ngIf="!project.overview">{{project.information}}</div>
         </div>
       </div>
     </div>
   </div>
   <div #customizable></div>
-  <div id="README" class="card">
-    <h1 class="card-title text-center">README</h1>
-    <br>
-    <br>
-    <markdown-to-html src="{{'https://raw.githubusercontent.com/fredzqm/' + project.repos + '/master/README.md'}}"></markdown-to-html>
-  </div>
 </div>
 

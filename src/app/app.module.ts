@@ -25,7 +25,16 @@ import {Route} from './route.module';
 import {MarkdownToHtmlModule} from 'ng2-markdown-to-html';
 import {PageHeaderComponent} from './page-header/page-header.component';
 import {PageFooterComponent} from './page-footer/page-footer.component';
-import {ChessProjectComponent} from './projects/chess-project/chess-project.component';
+
+import {ourProjects} from './projects/projects';
+import {ChessProjectComponent} from "./projects/chess-project/chess-project.component";
+
+const projectDetailComponentList = [];
+for (const project of ourProjects) {
+  if (project.detailComponent) {
+    projectDetailComponentList.push(project.detailComponent);
+  }
+}
 
 @NgModule({
   declarations: [
@@ -44,8 +53,7 @@ import {ChessProjectComponent} from './projects/chess-project/chess-project.comp
     ProjectCardComponent,
     PageHeaderComponent,
     PageFooterComponent,
-    ChessProjectComponent,
-  ],
+  ].concat(projectDetailComponentList),
   imports: [
     BrowserModule,
     FormsModule,
@@ -63,7 +71,8 @@ import {ChessProjectComponent} from './projects/chess-project/chess-project.comp
     MaterializeModule
   ],
   providers: [ProjectService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: projectDetailComponentList
 })
 export class AppModule {
 }
