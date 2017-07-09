@@ -3,15 +3,22 @@ img {
   width: 100%;
 }
 
-#gitHubLink {
-  position: absolute;
+#gitHubLabel {
   right: 10px;
+  position: absolute;
   top: 10px;
+}
+
+.floatingLabel {
+  position: absolute;
+  top: 10px;
+  background-color: #F7F0D7;
 }
 
 .card-title {
   color: #1E055F;
   font-family: 'Pangolin', cursive;
+  font-size: 2.8em;
 }
 
 #IntroCard {

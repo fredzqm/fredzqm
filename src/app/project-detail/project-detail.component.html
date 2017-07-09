@@ -1,15 +1,21 @@
 <app-page-header title="{{'Project Gallery &gt; ' + project.name}}"></app-page-header>
 <div class="container">
   <div id="IntroCard" class="card">
-    <a id="gitHubLink" md-mini-fab color="warn" href="{{'https://github.com/fredzqm/' + project.repos}}">
-      <img alt="GitHub" class="docs-github-logo" src="assets/github-circle-black.svg">
+    <a id="gitHubLabel" md-mini-fab color="warn"
+       [href]="'https://github.com/fredzqm/' + project.repos">
+      <img alt="GitHub" src="assets/github-circle-black.svg">
+    </a>
+    <a *ngFor="let tech of technologies; let i = index" class="floatingLabel" md-mini-fab
+       [href]="tech.href"
+       [ngStyle]="{'left': (10 + i * 50) + 'px'}">
+      <img alt="GitHub" [src]="tech.imageSrc">
     </a>
     <div class="card-block">
       <h1 class="card-title text-center">{{project.name}}</h1>
       <div class="media row">
         <img class="img-fluid img-thumbnail rounded-circle col-4"
              *ngIf="project.image"
-             alt="Generic placeholder image"
+             [alt]="project.name"
              [src]="project.image"
              [alt]="project.name">
         <div class="card-text media-body align-self-center col-8" height="100%">

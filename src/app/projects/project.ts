@@ -7,6 +7,7 @@ export interface Project {
   overview: string;
   image: string;
   repos: string;
+  technologies: string[];
   detailComponent: Type<any>;
 }
 

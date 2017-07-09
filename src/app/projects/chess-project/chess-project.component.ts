@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Project} from "../project";
 
 @Component({
@@ -8,13 +8,14 @@ import {Project} from "../project";
 })
 export class ChessProjectComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 }
 
-export const chessProject:Project = {
+export const chessProject: Project = {
   id: 1,
   name: 'Chess',
   information: '',
@@ -30,8 +31,9 @@ In my junior year, I took a software evolution class which focuses on improving 
 I continued to work on my Chess app because I am passionate about what I enjoy and cannot tolerate mediocre result.
   The functional java applet created by the freshman newbie was functional but was going to die without a good design.
   I was not OK with spaghetti codes, so I spent time improving and growing them. This is just one of many projects I worked on and loved.
-  I always pursue extensibility and have zero tolerant with poor design.` ,
+  I always pursue extensibility and have zero tolerant with poor design.`,
   image: 'assets/Chess.png',
   repos: 'Chess',
+  technologies: ["Java", "Firebase", "Angular"],
   detailComponent: ChessProjectComponent,
 };

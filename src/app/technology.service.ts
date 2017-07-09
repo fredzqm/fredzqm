@@ -11,11 +11,11 @@ export class TechnologyService {
     return vendorImages;
   }
 
-  public getImageOf(name: string): string {
+  public getTechnologyByName(name: string): Technology {
     for (const tech of vendorImages) {
       if (name === tech.name)
-        return tech.href;
+        return tech;
     }
-    return null;
+    throw "Technology " + name + " cannot be found";
   }
 }

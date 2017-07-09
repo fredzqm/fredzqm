@@ -25,7 +25,7 @@ export class StoneCutter extends React.Component<StoneCutterProperty, any> {
     const imageArray = this.props.technologies.map((image, i) =>
       <li className='grid-item' key={i} style={gridStyle}>
         <a href={image.href} target='_blank'>
-          <img src={image.src} alt={image.name} style={imageStyles}/>
+          <img src={image.imageSrc} alt={image.name} style={imageStyles}/>
         </a>
       </li>
     );

@@ -4,6 +4,8 @@ import {
 import {Project} from '../projects/project';
 import {ActivatedRoute} from '@angular/router';
 import {ProjectService} from '../projects/project.service';
+import {TechnologyService} from "app/technology.service";
+import {Technology} from "../home/technology";
 
 @Component({
   selector: 'app-project-detail',
@@ -11,20 +13,28 @@ import {ProjectService} from '../projects/project.service';
   styleUrls: ['./project-detail.component.css']
 })
 export class ProjectDetailComponent implements AfterContentInit {
+  @ViewChild('customizable', {read: ViewContainerRef})
+  custimizableComponent: ViewContainerRef;
+
+  technologies: Technology[];
   _project: Project;
   @Input() set project(project: Project) {
     this._project = project;
     this.updateCustomizedComponent();
+    if (this.project) {
+      this.technologies = this.project.technologies.map((name) => this.technologyService.getTechnologyByName(name));
+    } else {
+      this.technologies = [];
+    }
   }
 
   get project(): Project {
     return this._project;
   }
 
-  @ViewChild('customizable', {read: ViewContainerRef})
-  custimizableComponent: ViewContainerRef;
 
-  constructor(private componentFactoryResolver: ComponentFactoryResolver) {
+  constructor(private componentFactoryResolver: ComponentFactoryResolver,
+              private technologyService: TechnologyService) {
   }
 
   ngAfterContentInit() {
