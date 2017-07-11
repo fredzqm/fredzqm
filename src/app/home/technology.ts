@@ -6,182 +6,186 @@ export interface Technology {
 
 export const vendorImages : Technology[] = [{
   href: 'https://git-scm.com/',
-  imageSrc: 'assets/git.png',
+  imageSrc: 'assets/technologies/git.png',
   name: 'Git'
 }, {
   href: 'https://www.oracle.com/java/index.html',
-  imageSrc: 'assets/java.png',
+  imageSrc: 'assets/technologies/java.png',
   name: 'Java'
 }, {
   href: 'https://www.python.org/',
-  imageSrc: 'assets/python.png',
+  imageSrc: 'assets/technologies/python.png',
   name: 'Python'
 }, {
   href: 'https://isocpp.org/',
-  imageSrc: 'assets/cpp_logo.png',
+  imageSrc: 'assets/technologies/cpp_logo.png',
   name: 'C++'
 }, {
+  href: 'https://isocpp.org/',
+  imageSrc: 'assets/technologies/csharp.png',
+  name: 'C#'
+}, {
+  href: 'https://www.typescriptlang.org/',
+  imageSrc: 'assets/technologies/typescript.png',
+  name: 'Typescript'
+}, {
   href: 'https://www.mathworks.com/products/matlab.html',
-  imageSrc: 'assets/MATLAB.jpeg',
+  imageSrc: 'assets/technologies/MATLAB.jpeg',
   name: 'MATLAB'
 }, {
   href: 'https://angular.io/',
-  imageSrc: 'assets/images/angular.svg',
+  imageSrc: 'assets/technologies/angular.svg',
   name: 'Angular'
 }, {
   href: 'https://facebook.github.io/react/',
-  imageSrc: 'assets/react.png',
+  imageSrc: 'assets/technologies/react.png',
   name: 'React'
 }, {
   href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-  imageSrc: 'assets/javascript.png',
+  imageSrc: 'assets/technologies/javascript.png',
   name: 'Javascript6'
 }, {
   href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-  imageSrc: 'assets/html.png',
+  imageSrc: 'assets/technologies/html.png',
   name: 'HTML5'
 }, {
   href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-  imageSrc: 'assets/css.png',
+  imageSrc: 'assets/technologies/css.png',
   name: 'CSS3'
 }, {
-  href: 'https://www.typescriptlang.org/',
-  imageSrc: 'assets/typescript.png',
-  name: 'Typescript'
-}, {
   href: 'https://firebase.google.com/',
-  imageSrc: 'assets/firebase.png',
+  imageSrc: 'assets/technologies/firebase.png',
   name: 'Firebase'
 }, {
   href: 'https://www.android.com/',
-  imageSrc: 'assets/android.png',
+  imageSrc: 'assets/technologies/android.png',
   name: 'Android'
 }, {
   href: 'https://developer.apple.com/ios/',
-  imageSrc: 'assets/ios.jpg',
+  imageSrc: 'assets/technologies/ios.jpg',
   name: 'IOS'
 }, {
   href: 'http://github.com/',
-  imageSrc: 'assets/github.png',
+  imageSrc: 'assets/technologies/github.png',
   name: 'Github'
 }, {
   href: 'https://www.docker.com/',
-  imageSrc: 'assets/images/docker.svg',
+  imageSrc: 'assets/technologies/docker.svg',
   name: 'Docker'
 }, {
   href: 'http://hadoop.apache.org/',
-  imageSrc: 'assets/hadoop.png',
+  imageSrc: 'assets/technologies/hadoop.png',
   name: 'Hadoop'
 }, {
   href: 'https://hive.apache.org/',
-  imageSrc: 'assets/hive.png',
+  imageSrc: 'assets/technologies/hive.png',
   name: 'Hive'
 }, {
   href: 'http://lucene.apache.org/solr/',
-  imageSrc: 'assets/solr.png',
+  imageSrc: 'assets/technologies/solr.png',
   name: 'Solr'
 }, {
   href: 'https://spark.apache.org/',
-  imageSrc: 'assets/spark.png',
+  imageSrc: 'assets/technologies/spark.png',
   name: 'Spark'
 }, {
   href: 'http://oozie.apache.org/',
-  imageSrc: 'assets/oozie.png',
+  imageSrc: 'assets/technologies/oozie.png',
   name: 'Oozie'
 }, {
   href: 'http://sqoop.apache.org/',
-  imageSrc: 'assets/sqoop.png',
+  imageSrc: 'assets/technologies/sqoop.png',
   name: 'Sqoop'
 }, {
   href: 'https://zookeeper.apache.org/',
-  imageSrc: 'assets/zookeeper.png',
+  imageSrc: 'assets/technologies/zookeeper.png',
   name: 'zookeeper'
 }, {
   href: 'https://kafka.apache.org/',
-  imageSrc: 'assets/kafka.png',
+  imageSrc: 'assets/technologies/kafka.png',
   name: 'kafka'
 }, {
   href: 'https://projects.spring.io/spring-boot/',
-  imageSrc: 'assets/spring-boot.png',
+  imageSrc: 'assets/technologies/spring-boot.png',
   name: 'Spring Boot'
 }, {
   href: 'https://nodejs.org/',
-  imageSrc: 'assets/images/nodejs.svg',
+  imageSrc: 'assets/technologies/nodejs.svg',
   name: 'Node.js'
 }, {
   href: 'https://www.npmjs.com/',
-  imageSrc: 'assets/images/npm.svg',
+  imageSrc: 'assets/technologies/npm.svg',
   name: 'npm'
 }, {
   href: 'https://yarnpkg.com/en/',
-  imageSrc: 'assets/yarn.png',
+  imageSrc: 'assets/technologies/yarn.png',
   name: 'Yarn'
 }, {
   href: 'https://webpack.github.io',
-  imageSrc: 'assets/images/webpack.png',
+  imageSrc: 'assets/technologies/webpack.png',
   name: 'Webpack'
 }, {
   href: 'http://getbootstrap.com/',
-  imageSrc: 'assets/boostrap.png',
+  imageSrc: 'assets/technologies/boostrap.png',
   name: 'Boostrap'
 }, {
   href: 'http://fontawesome.io/',
-  imageSrc: 'assets/font-awesome.png',
+  imageSrc: 'assets/technologies/font-awesome.png',
   name: 'Font Awesome'
 }, {
   href: 'https://karma-runner.github.io',
-  imageSrc: 'assets/images/karma.png',
+  imageSrc: 'assets/technologies/karma.png',
   name: 'Karma'
 }, {
-  href: 'https://lodash.com/',
-  imageSrc: 'assets/images/lodash.png',
-  name: 'Lodash'
-}, {
   href: 'http://gulpjs.com/',
-  imageSrc: 'assets/images/gulp.png',
+  imageSrc: 'assets/technologies/gulp.png',
   name: 'Gulp'
 }, {
   href: 'http://mochajs.org/',
-  imageSrc: 'assets/mocha.svg',
+  imageSrc: 'assets/technologies/mocha.svg',
   name: 'Mocha'
 }, {
   href: 'http://sass-lang.com/',
-  imageSrc: 'assets/images/sass.svg',
+  imageSrc: 'assets/technologies/sass.svg',
   name: 'Sass'
 }, {
   href: 'https://www.mongodb.org/',
-  imageSrc: 'assets/images/mongodb.svg',
+  imageSrc: 'assets/technologies/mongodb.svg',
   name: 'Mongodb'
 }, {
   href: 'http://expressjs.com/',
-  imageSrc: 'assets/images/express.png',
+  imageSrc: 'assets/technologies/express.png',
   name: 'express'
 }, {
   href: 'https://material.io/',
-  imageSrc: 'assets/material-design.png',
+  imageSrc: 'assets/technologies/material-design.png',
   name: 'Material Design'
 }, {
   href: 'http://socket.io/',
-  imageSrc: 'assets/images/socketio.svg',
+  imageSrc: 'assets/technologies/socketio.svg',
   name: 'socket.io'
 }, {
+  href: 'https://babeljs.io/',
+  imageSrc: 'assets/technologies/babel.png',
+  name: 'Babel'
+}, {
   href: 'http://flask.pocoo.org/',
-  imageSrc: 'assets/flask.png',
+  imageSrc: 'assets/technologies/flask.png',
   name: 'Flask'
 }, {
   href: 'https://developer.chrome.com/extensions',
-  imageSrc: 'assets/chrome-extension.png',
+  imageSrc: 'assets/technologies/chrome-extension.png',
   name: 'Chrome Extension'
 }, {
   href: 'http://www.ni.com/en-us/shop/labview.html',
-  imageSrc: 'assets/LabVIEW.png',
+  imageSrc: 'assets/technologies/LabVIEW.png',
   name: 'LabVIEW'
 }, {
   href: 'http://www.scheme.com/tspl4/',
-  imageSrc: 'assets/Lambda_lc.svg.png',
+  imageSrc: 'assets/technologies/Lambda_lc.svg.png',
   name: 'Scheme'
 }, {
   href: 'https://tla.msr-inria.inria.fr/tlaps/content/Home.html',
-  imageSrc: 'assets/TLA+.png',
+  imageSrc: 'assets/technologies/TLA+.png',
   name: 'TLA+'
 }];
