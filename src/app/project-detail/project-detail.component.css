@@ -19,3 +19,7 @@
 #IntroCard {
   margin: 35px 0px;
 }
+
+.card-block .card-text {
+  margin: 25px;
+}

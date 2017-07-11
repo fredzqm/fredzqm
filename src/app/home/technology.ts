@@ -30,7 +30,7 @@ export const vendorImages : Technology[] = [{
   name: 'Angular'
 }, {
   href: 'https://facebook.github.io/react/',
-  imageSrc: 'assets/images/react.svg',
+  imageSrc: 'assets/react.png',
   name: 'React'
 }, {
   href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
@@ -163,7 +163,7 @@ export const vendorImages : Technology[] = [{
 }, {
   href: 'http://socket.io/',
   imageSrc: 'assets/images/socketio.svg',
-  name: 'socketio'
+  name: 'socket.io'
 }, {
   href: 'http://flask.pocoo.org/',
   imageSrc: 'assets/flask.png',
@@ -171,7 +171,7 @@ export const vendorImages : Technology[] = [{
 }, {
   href: 'https://developer.chrome.com/extensions',
   imageSrc: 'assets/chrome-extension.png',
-  name: 'Chrome extension'
+  name: 'Chrome Extension'
 }, {
   href: 'http://www.ni.com/en-us/shop/labview.html',
   imageSrc: 'assets/LabVIEW.png',
