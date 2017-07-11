@@ -10,8 +10,8 @@ export class ProjectService {
         return this.projectPromise;
     }
 
-    getOneProject(id: number | string): Promise<Project> {
+    getOneProjectWithReposName(reposName: string | string): Promise<Project> {
          return this.projectPromise
-            .then(project => project.find(p => p.id === +id));
+            .then(project => project.find(p => p.repos === reposName));
     }
 }

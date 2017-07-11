@@ -11,7 +11,7 @@ import {ProjectDetailRoutingComponent} from './project-detail/project-detail.com
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'detail/:id', component: ProjectDetailRoutingComponent},
+  {path: 'detail/:repos', component: ProjectDetailRoutingComponent},
   {path: 'projects', component: ProjectListComponent},
   {path: 'about', component: AboutComponent},
   {path: 'resume', component: ResumeComponent},

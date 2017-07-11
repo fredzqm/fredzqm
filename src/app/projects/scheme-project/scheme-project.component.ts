@@ -16,7 +16,6 @@ export class SchemeProjectComponent implements OnInit {
 }
 
 export const schemeProject: Project = {
-  id: 3,
   name: 'Scheme Interpreter',
   information: `This is a Scheme interpreter project for CSSE304(Programming language concept) course at Rose.`,
   overview: null,

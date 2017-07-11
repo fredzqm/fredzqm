@@ -64,8 +64,8 @@ export class ProjectDetailRoutingComponent implements OnInit {
   }
 
   ngOnInit() {
-    const id = +this.route.snapshot.params['id'];
-    this._projectService.getOneProject(id).then(project => {
+    const repos = this.route.snapshot.params['repos'];
+    this._projectService.getOneProjectWithReposName(repos).then(project => {
       this.project = project;
     });
   }
