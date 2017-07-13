@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Project} from "../project";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import {Terminal} from './terminal';
 
 @Component({
   selector: 'app-scheme-project',
@@ -8,11 +11,15 @@ import {Project} from "../project";
 })
 export class SchemeProjectComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+    ReactDOM.render(
+      <Terminal></Terminal>,
+      document.getElementById('terminal')
+    );
+  }
 }
 
 export const schemeProject: Project = {
