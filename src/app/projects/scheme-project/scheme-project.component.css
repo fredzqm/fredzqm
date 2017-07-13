@@ -1,8 +1,8 @@
 div#main {
-  max-width: 560px;
+  max-width: 1000px;
+  height: 1000px;
   background: #2b303b;
   border-radius: 5px;
-  height: 400px;
 }
 
 :host /deep/ #terminal {

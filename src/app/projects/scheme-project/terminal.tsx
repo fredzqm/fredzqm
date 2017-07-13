@@ -1,7 +1,17 @@
 import * as React from 'react';
 import * as ReactDOM from "react-dom";
 
-export class Terminal extends React.Component<any, any> {
+interface TerminalProp {
+  interpreter: (input: string) => string;
+  prompt: string;
+}
+
+interface TerminalState {
+  history: string[];
+  command: string;
+}
+
+export class Terminal extends React.Component<TerminalProp, TerminalState> {
   term;
 
   constructor(props) {
@@ -33,8 +43,8 @@ export class Terminal extends React.Component<any, any> {
 
   handleInput(e) {
     if (e.key === "Enter") {
-      this.setState((prevState) => {
-        prevState.history.push("$ " + prevState.command);
+      this.setState((prevState, props) => {
+        prevState.history.push(props.interpreter(prevState.command));
         prevState.command = "";
         return prevState;
       });
@@ -53,7 +63,7 @@ export class Terminal extends React.Component<any, any> {
       <div className='input-area' onClick={this.handleClick}>
         {output}
         <p>
-          <span className="prompt">{this.state.prompt}</span>
+          <span className="prompt">{this.props.prompt}</span>
           <input type="text"
                  value={this.state.command}
                  onChange={this.handleChange}

@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Project} from "../project";
+import {Terminal} from './terminal';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {Terminal} from './terminal';
+import * as biwascheme from 'biwascheme';
 
 @Component({
   selector: 'app-scheme-project',
@@ -14,9 +15,13 @@ export class SchemeProjectComponent implements OnInit {
   constructor() {
   }
 
+  eval(input: string) {
+    return "Entered: " + biwascheme.eval(input);
+  }
+
   ngOnInit() {
     ReactDOM.render(
-      <Terminal></Terminal>,
+      <Terminal interpreter={this.eval} prompt={'$ '}></Terminal>,
       document.getElementById('terminal')
     );
   }
