@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from 'react-dom';
 
 interface TerminalProp {
   interpreter: (input: string) => string;
@@ -30,8 +30,8 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
   }
 
   componentDidUpdate() {
-    let container = document.getElementById("terminal");
-    let el = ReactDOM.findDOMNode(this);
+    const container = document.getElementById('terminal');
+    const el = ReactDOM.findDOMNode(this);
     container.scrollTop = el.scrollHeight;
   }
 
@@ -42,10 +42,10 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
   }
 
   handleInput(e) {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       this.setState((prevState, props) => {
         prevState.history.push(props.interpreter(prevState.command));
-        prevState.command = "";
+        prevState.command = '';
         return prevState;
       });
     }
@@ -56,21 +56,21 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
   }
 
   render() {
-    let output = this.state.history.map(function (op, i) {
-      return <p key={i}>{op}</p>
+    const output = this.state.history.map(function (op, i) {
+      return <p key={i}>{op}</p>;
     });
     return (
       <div className='input-area' onClick={this.handleClick}>
         {output}
         <p>
-          <span className="prompt">{this.props.prompt}</span>
-          <input type="text"
+          <span className='prompt'>{this.props.prompt}</span>
+          <input type='text'
                  value={this.state.command}
                  onChange={this.handleChange}
                  onKeyPress={this.handleInput}
                  ref={(el) => this.term = el}/>
         </p>
       </div>
-    )
+    );
   }
 }

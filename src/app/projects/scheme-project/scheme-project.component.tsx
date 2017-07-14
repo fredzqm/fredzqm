@@ -18,7 +18,7 @@ export class SchemeProjectComponent implements OnInit {
   }
 
   eval(input: string) {
-    return "Entered: " + this.interpreter.evaluate(input);
+    return 'Entered: ' + this.interpreter.evaluate(input);
   }
 
   ngOnInit() {
@@ -35,6 +35,6 @@ export const schemeProject: Project = {
   overview: null,
   image: 'assets/projects/url_connect.png',
   repos: 'Scheme_interpreter',
-  technologies: ["Scheme"],
+  technologies: ['Scheme'],
   detailComponent: SchemeProjectComponent,
 };
