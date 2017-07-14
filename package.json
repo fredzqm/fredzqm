@@ -30,6 +30,7 @@
     "@types/react": "^15.0.33",
     "@types/react-dom": "^15.5.1",
     "angular2-materialize": "^15.0.4",
+    "biwascheme": "^0.6.7",
     "bootstrap": "^4.0.0-alpha.6",
     "color-convert": "^1.9.0",
     "core-js": "^2.4.1",

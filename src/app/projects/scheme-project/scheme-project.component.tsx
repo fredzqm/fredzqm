@@ -3,7 +3,6 @@ import {Project} from "../project";
 import {Terminal} from './terminal';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import * as biwascheme from 'biwascheme';
 
 @Component({
   selector: 'app-scheme-project',
@@ -11,12 +10,15 @@ import * as biwascheme from 'biwascheme';
   styleUrls: ['./scheme-project.component.css']
 })
 export class SchemeProjectComponent implements OnInit {
+  interpreter: any;
 
   constructor() {
+    this.interpreter = new BiwaScheme.Interpreter();
+    this.eval = this.eval.bind(this);
   }
 
   eval(input: string) {
-    return "Entered: " + biwascheme.eval(input);
+    return "Entered: " + this.interpreter.evaluate(input);
   }
 
   ngOnInit() {
