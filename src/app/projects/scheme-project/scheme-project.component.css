@@ -1,8 +1,13 @@
-div#main {
+#terminal {
   max-width: 1000px;
-  height: 1000px;
+  height: 400px;
   background: #2b303b;
   border-radius: 5px;
+  margin: 0 auto;
+}
+
+.README {
+  padding: 30px;
 }
 
 :host /deep/ .terminal {

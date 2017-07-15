@@ -18,7 +18,7 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
   constructor(props) {
     super(props);
     this.state = {
-      history: [],
+      history: ['Ctrl + Enter to execute the scheme code'],
       command: ''
     };
     this.handleClick = this.handleClick.bind(this);
