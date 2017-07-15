@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import TextareaAutosize from 'react-autosize-textarea';
 
 interface TerminalProp {
-  interpreter: (input: string) => string;
+  interpreter: (input: string) => Promise<string>;
   prompt: string;
 }
 
@@ -44,11 +44,20 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
 
   handleInput(e) {
     if (e.key === 'Enter' && e.shiftKey) {
+      const command = this.state.command;
       this.setState((prevState, props) => {
         prevState.history.push(props.prompt + prevState.command);
-        prevState.history.push(props.interpreter(prevState.command));
         prevState.command = '';
         return prevState;
+      }, () => {
+        this.props.interpreter(command)
+          .then((output) => {
+            this.setState((prevState, props) => {
+              prevState.history.push(output);
+              prevState.command = '';
+              return prevState;
+            });
+          });
       });
     }
   }
@@ -70,7 +79,7 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
                  value={this.state.command}
                  onChange={this.handleChange}
                  onKeyPress={this.handleInput}
-                 ref={(el) => this.term = el}
+                 innerRef={(el) => this.term = el}
           />
         </p>
       </div>
