@@ -23,7 +23,7 @@ export class SchemeProjectComponent implements OnInit {
 
   ngOnInit() {
     ReactDOM.render(
-      <Terminal interpreter={this.eval} prompt={'$ '}></Terminal>,
+      <Terminal interpreter={this.eval} prompt={'$ >'}></Terminal>,
       document.getElementById('terminal')
     );
   }
