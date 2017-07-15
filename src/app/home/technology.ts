@@ -177,6 +177,10 @@ export const vendorImages : Technology[] = [{
   imageSrc: 'assets/technologies/chrome-extension.png',
   name: 'Chrome Extension'
 }, {
+  href: 'http://www.graphviz.org/',
+  imageSrc: 'assets/technologies/GraphvizLogo.png',
+  name: 'GraphViz'
+}, {
   href: 'http://www.ni.com/en-us/shop/labview.html',
   imageSrc: 'assets/technologies/LabVIEW.png',
   name: 'LabVIEW'
