@@ -62,7 +62,7 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
     }
   }
 
-  handleClick() {
+  handleClick(e) {
     this.term.focus();
   }
 
@@ -71,7 +71,7 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
       return <p key={i}>{op}</p>;
     });
     return (
-      <div onClick={this.handleClick}>
+      <div className="terminal" onClick={this.handleClick}>
         {output}
         <p>
           <span className='prompt'>{this.props.prompt} </span>
