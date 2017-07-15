@@ -20,14 +20,21 @@ div#main {
   color: #d28445;
 }
 
-:host /deep/ input[type=text] {
+:host /deep/ span.prompt {
+  float: left;
+}
+
+:host /deep/ textarea {
+  float: left;
   border: none;
   padding: 0;
   margin: 0;
   height: 22px;
   background: #2b303b;
   color: #ebcb8b;
-  width: 80%;
+  resize: none;
+  width: 95%;
+  outline: none;
 }
 
 :host /deep/ p {
