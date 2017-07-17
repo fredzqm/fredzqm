@@ -22,6 +22,6 @@ export const chessProject: Project = {
 `,
   image: 'img/moveGUI3.png',
   repos: 'Chess',
-  technologies: ["Java", "Firebase", "Angular"],
+  technologies: ['Java', 'Firebase', 'Angular', 'Yarn', 'Gradle'],
   detailComponent: ChessProjectComponent,
 };
