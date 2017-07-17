@@ -57,6 +57,14 @@ export const vendorImages : Technology[] = [{
   imageSrc: 'assets/technologies/firebase.png',
   name: 'Firebase'
 }, {
+  href: 'https://www.ruby-lang.org/en/',
+  imageSrc: 'assets/technologies/ruby.png',
+  name: 'Ruby'
+}, {
+  href: 'https://developer.apple.com/swift/',
+  imageSrc: 'assets/technologies/swift.png',
+  name: 'Swift'
+}, {
   href: 'https://www.android.com/',
   imageSrc: 'assets/technologies/android.png',
   name: 'Android'
