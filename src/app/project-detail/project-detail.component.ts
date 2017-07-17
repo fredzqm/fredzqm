@@ -6,6 +6,7 @@ import {ActivatedRoute} from '@angular/router';
 import {ProjectService} from '../projects/project.service';
 import {TechnologyService} from "app/technology.service";
 import {Technology} from "../home/technology";
+import {ReadMeComponent} from '../read-me/read-me.component';
 
 @Component({
   selector: 'app-project-detail',
@@ -46,6 +47,10 @@ export class ProjectDetailComponent implements AfterContentInit {
       if (this.project.detailComponent) {
         this.custimizableComponent.clear();
         this.custimizableComponent.createComponent(this.componentFactoryResolver.resolveComponentFactory(this.project.detailComponent));
+      } else {
+        this.custimizableComponent.clear();
+        const component = this.custimizableComponent.createComponent(this.componentFactoryResolver.resolveComponentFactory(ReadMeComponent));
+        (<ReadMeComponent>component.instance).repos = this.project.repos;
       }
     }
   }
