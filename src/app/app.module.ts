@@ -11,7 +11,7 @@ import {PdfViewerComponent} from 'ng2-pdf-viewer';
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {ResumeComponent} from './resume/resume.component';
-import {ProjectService} from './projects/project.service';
+import {ProjectService} from './project.service';
 import {ProjectDetailComponent, ProjectDetailRoutingComponent} from './project-detail/project-detail.component';
 import {ProjectCardComponent} from './project-list/project-card/project-card.component';
 import {HelloComponent} from './hello/hello.component';
@@ -26,7 +26,7 @@ import {MarkdownToHtmlModule} from 'ng2-markdown-to-html';
 import {PageHeaderComponent} from './page-header/page-header.component';
 import {PageFooterComponent} from './page-footer/page-footer.component';
 
-import {ourProjects} from './projects/projects';
+import {ourProjects} from './projects';
 import {TechnologyService} from './technology.service';
 import {ReadMeComponent} from './read-me/read-me.component';
 

@@ -9,4 +9,3 @@ export interface Project {
   technologies: string[];
   detailComponent: Type<any>;
 }
-

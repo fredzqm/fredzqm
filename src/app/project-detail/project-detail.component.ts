@@ -1,11 +1,11 @@
 import {
   AfterContentInit, Component, ComponentFactoryResolver, Input, OnInit, ViewChild, ViewContainerRef
 } from '@angular/core';
-import {Project} from '../projects/project';
+import {Project} from '../project';
 import {ActivatedRoute} from '@angular/router';
-import {ProjectService} from '../projects/project.service';
+import {ProjectService} from '../project.service';
 import {TechnologyService} from "app/technology.service";
-import {Technology} from "../home/technology";
+import {Technology} from "../technology";
 import {ReadMeComponent} from '../read-me/read-me.component';
 
 @Component({

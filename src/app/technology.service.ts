@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Technology, vendorImages} from "./home/technology";
+import {Technology, vendorImages} from "./technology";
 
 @Injectable()
 export class TechnologyService {

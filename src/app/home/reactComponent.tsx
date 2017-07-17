@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {CSSGrid, measureItems, makeResponsive, layout} from 'react-stonecutter';
-import {Technology} from './technology';
+import {Technology} from '../technology';
 
 interface StoneCutterProperty {
   technologies: Technology[];
