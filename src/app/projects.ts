@@ -7,12 +7,14 @@ import {jobeeProject} from './projects/jobee-project';
 import {laplaceProejct} from './projects/laplace-project/laplace-project';
 import {diggerGameProject} from './projects/digger-game-project';
 import {operatingSystemProject} from './projects/operating-system-project';
+import {mapProejct} from './projects/map-project';
 
 export const ourProjects: Project[] = [
   chessProject,
   urlConnectProejct,
   schemeProject,
   umlGeneratorProject,
+  mapProejct,
   jobeeProject,
   laplaceProejct,
   diggerGameProject,

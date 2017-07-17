@@ -89,6 +89,10 @@ export const vendorImages : Technology[] = [{
   imageSrc: 'assets/technologies/hadoop.png',
   name: 'Hadoop'
 }, {
+  href: 'https://pig.apache.org/',
+  imageSrc: 'assets/technologies/pig.png',
+  name: 'Pig'
+}, {
   href: 'https://hive.apache.org/',
   imageSrc: 'assets/technologies/hive.png',
   name: 'Hive'
