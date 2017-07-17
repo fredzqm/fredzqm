@@ -194,7 +194,8 @@ module.exports = {
         "assets",
         "favicon.ico",
         "404.html",
-        "img"
+        "img",
+        "paper"
       ],
       "globOptions": {
         "cwd": "./src",

@@ -4,6 +4,7 @@ import {urlConnectProejct} from "./projects/url-connect-project";
 import {schemeProject} from "./projects/scheme-project/scheme-project";
 import {umlGeneratorProject} from './projects/uml-generator-project';
 import {jobeeProject} from './projects/jobee-project';
+import {laplaceProejct} from './projects/laplace-project/laplace-project';
 
 export const ourProjects: Project[] = [
   chessProject,
@@ -11,4 +12,5 @@ export const ourProjects: Project[] = [
   schemeProject,
   umlGeneratorProject,
   jobeeProject,
+  laplaceProejct,
 ];
