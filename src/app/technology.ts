@@ -21,6 +21,10 @@ export const vendorImages : Technology[] = [{
   imageSrc: 'assets/technologies/cpp_logo.png',
   name: 'C++'
 }, {
+  href: 'https://www.wikiwand.com/en/C_(programming_language)',
+  imageSrc: 'assets/technologies/C.png',
+  name: 'C'
+}, {
   href: 'https://isocpp.org/',
   imageSrc: 'assets/technologies/csharp.png',
   name: 'C#'
