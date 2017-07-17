@@ -107,11 +107,11 @@ export const vendorImages : Technology[] = [{
 }, {
   href: 'http://maven.apache.org/',
   imageSrc: 'assets/technologies/maven.png',
-  name: 'maven'
+  name: 'Maven'
 }, {
   href: 'https://gradle.org/',
   imageSrc: 'assets/technologies/gradle.png',
-  name: 'gradle'
+  name: 'Gradle'
 }, {
   href: 'https://projects.spring.io/spring-boot/',
   imageSrc: 'assets/technologies/spring-boot.png',

@@ -28,6 +28,7 @@ import {PageFooterComponent} from './page-footer/page-footer.component';
 
 import {ourProjects} from './projects/projects';
 import {TechnologyService} from './technology.service';
+import {ReadMeComponent} from './read-me/read-me.component';
 
 const projectDetailComponentList = [];
 for (const project of ourProjects) {
@@ -49,6 +50,7 @@ for (const project of ourProjects) {
     TruncatePipe,
     NavbarComponent,
     PdfViewerComponent,
+    ReadMeComponent,
     ResumeComponent,
     ProjectCardComponent,
     PageHeaderComponent,
