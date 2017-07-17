@@ -6,10 +6,6 @@
   margin: 0 auto;
 }
 
-.README {
-  padding: 30px;
-}
-
 :host /deep/ .terminal {
   padding: 20px 10px;
   height: 100%;
