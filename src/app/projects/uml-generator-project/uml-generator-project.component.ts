@@ -1,12 +1,4 @@
-import {Component} from '@angular/core';
 import {Project} from '../project';
-
-@Component({
-  selector: 'app-uml-generator-project',
-  templateUrl: './uml-generator-project.component.html',
-  styleUrls: ['./uml-generator-project.component.css']
-})
-export class UMLGeneratorProjectComponent {}
 
 export const umlGeneratorProject: Project = {
   name: 'UML Generator',
@@ -15,5 +7,5 @@ export const umlGeneratorProject: Project = {
   image: 'assets/projects/DecLab.svg',
   repos: 'UMLGenerator',
   technologies: ['Java', 'GraphViz', 'Gradle'],
-  detailComponent: UMLGeneratorProjectComponent
+  detailComponent: null
 };

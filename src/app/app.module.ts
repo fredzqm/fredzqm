@@ -30,7 +30,7 @@ import {ourProjects} from './projects/projects';
 import {TechnologyService} from './technology.service';
 import {ReadMeComponent} from './read-me/read-me.component';
 
-const projectDetailComponentList = [];
+const projectDetailComponentList = [ReadMeComponent];
 for (const project of ourProjects) {
   if (project.detailComponent) {
     projectDetailComponentList.push(project.detailComponent);
@@ -50,7 +50,6 @@ for (const project of ourProjects) {
     TruncatePipe,
     NavbarComponent,
     PdfViewerComponent,
-    ReadMeComponent,
     ResumeComponent,
     ProjectCardComponent,
     PageHeaderComponent,

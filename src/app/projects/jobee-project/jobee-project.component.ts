@@ -1,17 +1,4 @@
-import {Component} from '@angular/core';
 import {Project} from '../project';
-
-@Component({
-  selector: 'app-jobee-project',
-  templateUrl: './jobee-project.component.html',
-  styleUrls: ['./jobee-project.component.css']
-})
-export class JobeeProjectComponent {
-
-  constructor() {
-  }
-}
-
 
 export const jobeeProject: Project = {
   name: 'Jobee',
@@ -20,5 +7,5 @@ export const jobeeProject: Project = {
   image: 'assets/projects/jobee.png',
   repos: 'jobee',
   technologies: ['Android', 'Gradle', 'Firebase'],
-  detailComponent: JobeeProjectComponent
+  detailComponent: null
 };

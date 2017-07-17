@@ -1,14 +1,4 @@
-import { Component } from '@angular/core';
 import {Project} from "../project";
-
-@Component({
-  selector: 'app-url-connect-project',
-  templateUrl: './url-connect-project.component.html',
-  styleUrls: ['./url-connect-project.component.css']
-})
-export class UrlConnectProjectComponent {
-}
-
 
 export const urlConnectProejct: Project = {
   name: 'Url Connect',
@@ -17,5 +7,5 @@ export const urlConnectProejct: Project = {
   image: 'assets/projects/url_connect.png',
   repos: 'url_connect',
   technologies: ["Chrome Extension", "React", "Webpack", "Typescript", "Yarn"],
-  detailComponent: UrlConnectProjectComponent,
+  detailComponent: null,
 };

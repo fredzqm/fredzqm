@@ -44,11 +44,10 @@ export class ProjectDetailComponent implements AfterContentInit {
 
   updateCustomizedComponent() {
     if (this.project) {
+      this.custimizableComponent.clear();
       if (this.project.detailComponent) {
-        this.custimizableComponent.clear();
         this.custimizableComponent.createComponent(this.componentFactoryResolver.resolveComponentFactory(this.project.detailComponent));
       } else {
-        this.custimizableComponent.clear();
         const component = this.custimizableComponent.createComponent(this.componentFactoryResolver.resolveComponentFactory(ReadMeComponent));
         (<ReadMeComponent>component.instance).repos = this.project.repos;
       }

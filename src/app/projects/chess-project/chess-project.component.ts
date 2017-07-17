@@ -1,13 +1,4 @@
-import {Component} from '@angular/core';
-import {Project} from "../project";
-
-@Component({
-  selector: 'app-chess-project',
-  templateUrl: './chess-project.component.html',
-  styleUrls: ['./chess-project.component.css']
-})
-export class ChessProjectComponent {
-}
+import {Project} from '../project';
 
 export const chessProject: Project = {
   name: 'Chess',
@@ -23,5 +14,5 @@ export const chessProject: Project = {
   image: 'img/moveGUI3.png',
   repos: 'Chess',
   technologies: ['Java', 'Firebase', 'Angular', 'Yarn', 'Gradle'],
-  detailComponent: ChessProjectComponent,
+  detailComponent: null,
 };
