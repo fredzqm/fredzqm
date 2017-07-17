@@ -3,6 +3,21 @@
   transition: all 0.5s ease-in-out;
 }
 
+@media (min-width: 768px) {
+  img.card-img-top {
+    height: 21em;
+  }
+  div.card {
+    height: 35em;
+  }
+}
+
+@media (min-width: 992px) {
+  img.card-img-top {
+    height: 17em;
+  }
+}
+
 :host:hover {
   transform: scale(1.05);
 }

@@ -6,7 +6,7 @@ import {Project} from '../../project';
   templateUrl: './project-card.component.html',
   styleUrls: ['./project-card.component.css'],
   host: {
-    'class': 'col-sm-12 col-md-6 col-lg-4'
+    'class': 'col-sm-12 col-md-6 col-lg-4 col-xl-3'
   }
 })
 export class ProjectCardComponent {
