@@ -7,7 +7,7 @@ export const dPSMProejct: Project = {
     This is a continuation of the Laplace research project with Dr. Isaia.
   `,
   overview: null,
-  image: 'assets/projects/osm_logo_wiki.png',
+  image: 'assets/projects/dPSM.jpg',
   repos: 'dPSM',
   technologies: ['MATLAB'],
   detailComponent: null,
