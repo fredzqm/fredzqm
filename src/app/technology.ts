@@ -177,6 +177,10 @@ export const vendorImages : Technology[] = [{
   imageSrc: 'assets/technologies/mongodb.svg',
   name: 'Mongodb'
 }, {
+  href: 'https://redis.io/',
+  imageSrc: 'assets/technologies/redis.svg',
+  name: 'Redis'
+}, {
   href: 'http://expressjs.com/',
   imageSrc: 'assets/technologies/express.png',
   name: 'express'
