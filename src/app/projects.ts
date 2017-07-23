@@ -9,6 +9,7 @@ import {diggerGameProject} from './projects/digger-game-project';
 import {operatingSystemProject} from './projects/operating-system-project';
 import {mapProejct} from './projects/map-project';
 import {dPSMProejct} from './projects/dPSM';
+import {cpuProejct} from './projects/cpu-project/cpu-project';
 
 export const ourProjects: Project[] = [
   chessProject,
@@ -21,4 +22,5 @@ export const ourProjects: Project[] = [
   laplaceProejct,
   dPSMProejct,
   diggerGameProject,
+  cpuProejct,
 ];
