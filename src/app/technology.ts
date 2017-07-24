@@ -34,7 +34,7 @@ export const vendorImages : Technology[] = [{
   name: 'Typescript'
 }, {
   href: 'https://www.mathworks.com/products/matlab.html',
-  imageSrc: 'assets/technologies/MATLAB.jpeg',
+  imageSrc: 'assets/technologies/MATLAB.png',
   name: 'MATLAB'
 }, {
   href: 'https://angular.io/',
