@@ -18,11 +18,13 @@ div.collapsible-body {
   font-family: "Times New Roman", Times, serif;
 }
 
-ol li {
-  list-style-type: circle;
-  list-style-position: inside;
+div.collapsible-body ol li {
+  list-style: circle inside;
 }
 
+div.collapsible-body ul li {
+  list-style: circle inside;
+}
 
 div.collapsible-header a {
   margin-left: 0.7em;
