@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ProjectService} from '../project.service';
 import {Project} from '../project';
-import {Router}    from '@angular/router';
+import {Router} from '@angular/router';
 
 @Component({
   templateUrl: './project-list.html',

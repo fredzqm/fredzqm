@@ -18,7 +18,7 @@ export const ourProjects: Project[] = [
   jobeeProject,
   mapProejct,
   urlConnectProejct,
-  // operatingSystemProject,
+  operatingSystemProject,
   laplaceProejct,
   dPSMProejct,
   diggerGameProject,
