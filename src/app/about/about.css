@@ -1,5 +1,5 @@
 .about-row{
-    padding-top: 7%;
+  padding-top: 7%;
 }
 
 p {
@@ -10,7 +10,6 @@ div.collapsible-header {
   font-size: 32px;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: bold;
-  line-height: 2.5em;
 }
 
 div.collapsible-body {

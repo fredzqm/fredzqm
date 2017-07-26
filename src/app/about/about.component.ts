@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   templateUrl: './about.html',
-  styleUrls: ['./about.css'],
+  styleUrls: ['./about-materialize-css.css', './about.css'],
 })
-export class AboutComponent { }
+export class AboutComponent {
+}
