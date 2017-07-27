@@ -53,7 +53,7 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
         this.props.interpreter(command)
           .then((output) => {
             this.setState((prevState, props) => {
-              prevState.history.push(output);
+              prevState.history.push(output.toString());
               prevState.command = '';
               return prevState;
             });
@@ -71,7 +71,7 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
       return <p key={i}>{op}</p>;
     });
     return (
-      <div className="terminal" onClick={this.handleClick}>
+      <div className='terminal' onClick={this.handleClick}>
         {output}
         <p>
           <span className='prompt'>{this.props.prompt} </span>
