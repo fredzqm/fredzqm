@@ -8,7 +8,7 @@ import {laplaceProejct} from './projects/laplace-project/laplace-project';
 import {diggerGameProject} from './projects/digger-game-project';
 import {operatingSystemProject} from './projects/operating-system-project';
 import {mapProejct} from './projects/map-project';
-import {dPSMProejct} from './projects/dPSM';
+import {dPSMProejct} from './projects/dPSM-project';
 import {cpuProejct} from './projects/cpu-project/cpu-project';
 
 export const ourProjects: Project[] = [

@@ -11,7 +11,7 @@ export const chessProject: Project = {
  If you also love Chess, invite your friend and let play!
 </p>
 `,
-  image: 'img/moveGUI3.png',
+  image: 'assets/projects/Chess.png',
   repos: 'Chess',
   technologies: ['Java', 'Firebase', 'Angular', 'Yarn', 'Gradle'],
   detailComponent: null,
