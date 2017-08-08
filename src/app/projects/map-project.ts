@@ -1,9 +1,9 @@
 import {Project} from '../project';
 
 export const mapProejct: Project = {
-  name: 'Map Project',
+  name: 'Path Finder',
   information: `
-  Map project is an attemmpt to solve the classic shortest path problem scalably with Hadoop. 
+  Path finder is an attemmpt to solve the classic shortest path problem scalably with Hadoop. 
   We import open street map data into hive and then run my divide-and-conquer algorithm to produce multi-level maps.
   `,
   overview: `
@@ -28,7 +28,7 @@ export const mapProejct: Project = {
   </p>
   `,
   image: 'assets/projects/osm_logo_wiki.png',
-  repos: 'mapproject',
+  repos: 'pathFinder',
   technologies: ['Hadoop', 'Pig', 'Hive', 'Java', 'Oozie'],
   detailComponent: null,
 };
