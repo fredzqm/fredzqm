@@ -220,4 +220,8 @@ export const vendorImages : Technology[] = [{
   href: 'https://tla.msr-inria.inria.fr/tlaps/content/Home.html',
   imageSrc: 'assets/technologies/TLA+.png',
   name: 'TLA+'
+}, {
+  href: 'https://www.tensorflow.org/',
+  imageSrc: 'assets/technologies/tensorflow.png',
+  name: 'TensorFlow'
 }];
