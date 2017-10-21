@@ -61,6 +61,18 @@ export const vendorImages : Technology[] = [{
   imageSrc: 'assets/technologies/firebase.png',
   name: 'Firebase'
 }, {
+  href: 'https://cloud.google.com/',
+  imageSrc: 'assets/technologies/google-cloud.svg',
+  name: 'GCloud'
+}, {
+  href: 'https://www.tensorflow.org/',
+  imageSrc: 'assets/technologies/tensorflow.png',
+  name: 'TensorFlow'
+}, {
+  href: 'https://keras.io/',
+  imageSrc: 'assets/technologies/keras-logo-small.jpg',
+  name: 'Keras'
+}, {
   href: 'https://www.ruby-lang.org/en/',
   imageSrc: 'assets/technologies/ruby.png',
   name: 'Ruby'
@@ -80,6 +92,10 @@ export const vendorImages : Technology[] = [{
   href: 'http://github.com/',
   imageSrc: 'assets/technologies/github.png',
   name: 'Github'
+}, {
+  href: 'https://about.gitlab.com/',
+  imageSrc: 'assets/technologies/gitlab.svg',
+  name: 'GitLab'
 }, {
   href: 'https://www.docker.com/',
   imageSrc: 'assets/technologies/docker.svg',
@@ -220,8 +236,4 @@ export const vendorImages : Technology[] = [{
   href: 'https://tla.msr-inria.inria.fr/tlaps/content/Home.html',
   imageSrc: 'assets/technologies/TLA+.png',
   name: 'TLA+'
-}, {
-  href: 'https://www.tensorflow.org/',
-  imageSrc: 'assets/technologies/tensorflow.png',
-  name: 'TensorFlow'
 }];
