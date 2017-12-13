@@ -89,6 +89,14 @@ export const vendorImages : Technology[] = [{
   imageSrc: 'assets/technologies/docker.svg',
   name: 'Docker'
 }, {
+  href: 'https://kubernetes.io/',
+  imageSrc: 'assets/technologies/kubernetes.png',
+  name: 'kubernetes'
+}, {
+  href: 'https://apprenda.com/kismatic/',
+  imageSrc: 'assets/technologies/kismatic.png',
+  name: 'Kismatic'
+}, {
   href: 'https://www.mysql.com/',
   imageSrc: 'assets/technologies/MySQL.png',
   name: 'MySQL'
