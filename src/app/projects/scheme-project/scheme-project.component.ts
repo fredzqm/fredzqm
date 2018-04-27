@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Terminal} from './terminal';
+import { Component, OnInit } from '@angular/core';
+import { Terminal } from './terminal';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
@@ -16,9 +16,9 @@ export class SchemeProjectComponent implements OnInit {
     this.eval = this.eval.bind(this);
   }
 
-  eval(input: string) : Promise<string> {
+  eval(input: string): Promise<string> {
     return new Promise((resolve) => {
-      this.interpreter.on_error = function(error) {
+      this.interpreter.on_error = function (error) {
         resolve(error.message);
       };
       const result: string = this.interpreter.evaluate(input);
@@ -28,7 +28,10 @@ export class SchemeProjectComponent implements OnInit {
 
   ngOnInit() {
     ReactDOM.render(
-      <Terminal interpreter={this.eval} prompt={'$  >'}></Terminal>,
+      React.createElement(Terminal, {
+        intercept: this.eval,
+        prompt: '$  >',
+      }),
       document.getElementById('terminal')
     );
   }
