@@ -123,7 +123,8 @@ module.exports = {
   "resolve": {
     "extensions": [
       ".ts",
-      ".js"
+      ".js",
+      ".tsx"
     ],
     "symlinks": true,
     "modules": [
@@ -381,7 +382,7 @@ module.exports = {
         ]
       },
       {
-        "test": /\.ts$/,
+        "test": /\.tsx?$/,
         "loader": "@ngtools/webpack"
       }
     ]
@@ -402,6 +403,14 @@ module.exports = {
         "to": "",
         "from": {
           "glob": "favicon.ico",
+          "dot": true
+        }
+      },
+      {
+        "context": "src",
+        "to": "",
+        "from": {
+          "glob": "paper",
           "dot": true
         }
       }
