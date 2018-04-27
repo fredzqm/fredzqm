@@ -46,16 +46,18 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
     if (e.key === 'Enter' && e.shiftKey) {
       const command = this.state.command;
       this.setState((prevState, props) => {
-        prevState.history.push(props.prompt + prevState.command);
-        prevState.command = '';
-        return prevState;
+        return {
+          history: prevState.history.concat([props.prompt + prevState.command]),
+          command: ''
+        };
       }, () => {
         this.props.interpreter(command)
           .then((output) => {
             this.setState((prevState, props) => {
-              prevState.history.push(output.toString());
-              prevState.command = '';
-              return prevState;
+              return {
+                history: prevState.history.concat([output.toString()]),
+                command: ''
+              };
             });
           });
       });
@@ -76,10 +78,10 @@ export class Terminal extends React.Component<TerminalProp, TerminalState> {
         <p>
           <span className='prompt'>{this.props.prompt} </span>
           <TextareaAutosize
-                 value={this.state.command}
-                 onChange={this.handleChange}
-                 onKeyPress={this.handleInput}
-                 innerRef={(el) => this.term = el}
+            value={this.state.command}
+            onChange={this.handleChange}
+            onKeyPress={this.handleInput}
+            innerRef={(el) => this.term = el}
           />
         </p>
       </div>
