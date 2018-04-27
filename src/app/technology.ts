@@ -4,7 +4,7 @@ export interface Technology {
   name: string;
 }
 
-export const vendorImages : Technology[] = [{
+export const vendorImages: Technology[] = [{
   href: 'https://git-scm.com/',
   imageSrc: 'assets/technologies/git.png',
   name: 'Git'
@@ -108,6 +108,14 @@ export const vendorImages : Technology[] = [{
   href: 'https://redis.io/',
   imageSrc: 'assets/technologies/redis.svg',
   name: 'Redis'
+}, {
+  href: 'https://memcached.org/',
+  imageSrc: 'assets/technologies/memcached.jpg',
+  name: 'Memcached'
+}, {
+  href: 'https://neo4j.com/',
+  imageSrc: 'assets/technologies/neo4j.jpg',
+  name: 'Neo4j'
 }, {
   href: 'https://gradle.org/',
   imageSrc: 'assets/technologies/gradle.png',
