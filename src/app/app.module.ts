@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MaterializeModule} from 'angular2-materialize';
-import {MdButtonModule, MdToolbarModule, MdTooltipModule, MdMenuModule, MdIconModule, MdCardModule} from '@angular/material';
+import {MatButtonModule, MatToolbarModule, MatTooltipModule, MatMenuModule, MatIconModule, MatCardModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {PdfViewerComponent} from 'ng2-pdf-viewer';
@@ -62,12 +62,12 @@ for (const project of ourProjects) {
     FlexLayoutModule,
     NgbModule.forRoot(),
     Route,
-    MdToolbarModule,
-    MdButtonModule,
-    MdTooltipModule,
-    MdMenuModule,
-    MdIconModule,
-    MdCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatTooltipModule,
+    MatMenuModule,
+    MatIconModule,
+    MatCardModule,
     MarkdownToHtmlModule.forRoot(),
     MaterializeModule
   ],
